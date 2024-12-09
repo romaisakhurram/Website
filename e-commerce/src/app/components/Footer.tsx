@@ -17,7 +17,7 @@ export default function Footer () {
               
                      {/* Logo */}
                      <Image
-                      src="/lodo.00.png"
+                      src="/images/Hekto.png"
                       width={98}
                       height={34}
                       alt="logo"
