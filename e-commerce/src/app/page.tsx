@@ -5,6 +5,7 @@ import Latest from "./components/latest"
 import Offer from "./components/Offer"
 import Unique from "./components/Unique"
 import Discount from "./components/Discount"
+import Topcategories from "./components/Topcategories"
 import TrendingProduct from "./components/TrendingProduct"
 
 
@@ -19,6 +20,7 @@ export default function Home() {
        <Unique/>
        <Discount/>
        <TrendingProduct/>
+       <Topcategories/>
        <Blog/>
     </div>
   );
