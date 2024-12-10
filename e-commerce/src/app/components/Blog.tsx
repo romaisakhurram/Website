@@ -35,12 +35,12 @@ export default function Blog () {
               className="relative border rounded-xl p-4 bg-white shadow-md hover:shadow-lg transition duration-300"
               style={{ height: "300px", width:"300px" }} // Optional height for consistent card size
             >
-              <div className="w-[200px] h-40 flex items-center justify-center overflow-hidden rounded-lg">
+              <div className="w-[260px] h-40 flex items-center justify-center overflow-hidden rounded-lg">
                 <Image
                   src={blog.image}
                   alt={blog.title}
-                  width={300}
-                  height={300}
+                  width={400}
+                  height={400}
                   className="object-contain w-[300px] h-[260px]"
                 ></Image>
               </div>
