@@ -40,7 +40,7 @@ export default function Feature () {
                   className="w-[98%] h-[98%] m-2 rounded-lg"
                    ></Image>
                 </div>
-                <div className="w-[300px] h-[160px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5">
+                <div className="w-[300px] h-[160px]  p-5">
                   <span className="text-blue-900 hover:text-pink-600 font-serif text-md">{Idata.title}</span><br />
                   <span className="text-gray-400 text-sm">{Idata.desc}</span><br />
                   <button className="text-blue-900 underline underline-offset-1 hover:text-pink-600"><Link href="/">{Idata.button}</Link></button>
