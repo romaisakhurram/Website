@@ -1,0 +1,54 @@
+import Image from "next/image"
+import Link from "next/link"
+
+export default function Feature () {
+    const data = [ 
+    {
+        id:1,
+        title :"Top essential Trend in 2021",
+        desc: "More off this less hello samlande lied much over tightly circa horse taped mightly",
+        button:"ReadMore",
+       Image:  "/images/cart1.png"
+    },
+    {
+        id:2,
+        title :"Top essential Trend in 2021",
+        desc: "More off this less hello samlande lied much over tightly circa horse taped mightly",
+        button:"ReadMore",
+       Image :  "/images/cart2.png"
+    },
+    {
+        id:3,
+        title :"Top essential Trend in 2021",
+        desc: "More off this less hello samlande lied much over tightly circa horse taped mightly",
+        button:"ReadMore",
+       Image :  "/images/cart3.png"
+    },
+    ]
+
+    return (
+        <div className="container w-full h-[800] mt-20 p-5">
+          <h1 className="text-[40px] font-serif font-bold text-blue-900 text-center">Latest Blog</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+           {data.map ((Idata) => (
+            <div className=" mt-20 bg-white w-[600] h-[500] shadow-lg border border-gray-300 rounded-xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-[330px] h-[200px]">
+                  <Image src={Idata.Image} 
+                  alt={Idata.title} 
+                  width={220} 
+                  height={180}
+                  className="w-[98%] h-[98%] m-2 rounded-lg"
+                   ></Image>
+                </div>
+                <div className="w-[300px] h-[160px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5">
+                  <span className="text-blue-900 hover:text-pink-600 font-serif text-md">{Idata.title}</span><br />
+                  <span className="text-gray-400 text-sm">{Idata.desc}</span><br />
+                  <button className="text-blue-900 underline underline-offset-1 hover:text-pink-600"><Link href="/">{Idata.button}</Link></button>
+                </div>
+            </div>
+            ))}
+            </div>
+  
+        </div>
+    )
+}
