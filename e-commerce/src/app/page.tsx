@@ -7,7 +7,7 @@ import TrendingProduct from "./components/TrendingProduct"
 import Discount from "./components/Discount"
 import Topcategories from "./components/Topcategories"
 import LatestUpdate from "./components/LatestUpdate"
-import Blog from "./components/Blog"
+import BlogPage from "./components/BlogPage"
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       <Discount/>
       <Topcategories/>
       <LatestUpdate/>
-      <Blog/>
+      <BlogPage/>
     </div>
   );
 }

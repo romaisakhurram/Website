@@ -7,8 +7,8 @@ import Link from "next/link"
 
 export default function TopHeader () {
     return (
-        <div className="containerw-full h-10 bg-violet-800 text-white items-center p-2">
-            <div className="flex justify-center gap-10 items-center ml-40">
+        <div className="w-full h-10 bg-violet-800 text-white items-center p-2">
+            <div className="flex justify-center  gap-10  items-center ml-40">
                 <div className="flex gap-6">
                     <p className="flex gap-2"><AiOutlineMail className="w-8 h-6" />mhhasanul@gmail.com</p>
                     <p className="flex gap-2"><FaPhoneVolume className="w-8 h-5"/>(12345)67890</p>

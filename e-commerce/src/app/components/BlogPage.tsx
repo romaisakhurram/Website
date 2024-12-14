@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Feature () {
+export default function BlogPage () {
     const data = [ 
     {
         id:1,
@@ -27,12 +27,12 @@ export default function Feature () {
     ]
 
     return (
-        <div className="container w-full h-[800] mt-20 p-5">
+        <div className="w-full h-[800] mt-20 p-5">
           <h1 className="text-[40px] font-serif font-bold text-blue-900 text-center">Latest Blog</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+          <div className="flex justify-center gap-10">
            {data.map ((Idata) => (
             <div className=" mt-20 bg-white w-[600] h-[500] shadow-lg border border-gray-300 rounded-xl">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-[330px] h-[200px]">
+                <div className="flex  w-[330px] h-[200px]">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 
                   width={220} 
@@ -40,9 +40,9 @@ export default function Feature () {
                   className="w-[98%] h-[98%] m-2 rounded-lg"
                    ></Image>
                 </div>
-                <div className="w-[300px] h-[160px]  p-5">
-                  <span className="text-blue-900 hover:text-pink-600 font-serif text-md">{Idata.title}</span><br />
-                  <span className="text-gray-400 text-sm">{Idata.desc}</span><br />
+                <div className="w-[300px] h-[160px] p-5">
+                  <span className="text-blue-900 hover:text-pink-600 font-serif text-[20px]">{Idata.title}</span><br />
+                  <span className="text-gray-400 text-[16px]">{Idata.desc}</span><br />
                   <button className="text-blue-900 underline underline-offset-1 hover:text-pink-600"><Link href="/">{Idata.button}</Link></button>
                 </div>
             </div>
