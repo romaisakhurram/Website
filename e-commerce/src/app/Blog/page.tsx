@@ -36,6 +36,8 @@ export default function Blog() {
                 <Image
                   src={post.image}
                   alt={post.title}
+                  width={100}
+                  height={100}
                   className="w-full h-64 object-cover rounded-t-lg"
                 />
                 <div className="p-6">
