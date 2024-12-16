@@ -1,4 +1,4 @@
-import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+
 import Image from "next/image"
 import Link from "next/link"
 export default function Blog() {
@@ -55,13 +55,13 @@ export default function Blog() {
           </div>
   
           {/* Sidebar */}
-         
+           <aside>
             <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3">Search <HiOutlineMagnifyingGlass/> </h3>
-              <input
+              <h3 className="text-lg font-semibold mb-3">Search  </h3>
+              <input 
                 type="text"
                 placeholder="Search..."
-                className="w-full border rounded p-2"
+                className="w-full border rounded p-2" 
               />
             </div>
   
@@ -135,6 +135,7 @@ export default function Blog() {
                 ))}
               </div>
             </div>
+          </aside>
         </div>
       </div>
     );
