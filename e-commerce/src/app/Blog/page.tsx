@@ -82,53 +82,88 @@ export default function Blog() {
                 )}
               </ul>
             </div>
-  
             <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3">Recent Posts</h3>
-              <ul className="text-gray-600 space-y-2">
+              <h3 className="text-lg font-semibold font-serif mb-3">Recent Post</h3>
+              <ul className=" space-y-2">
                 {[
-                  {title:"How to Use Tailwind CSS" , Image:"/images/blog4.png"},
-                  {title:"Next.js vs React", Image:"/images/blog4.png"},
-                  {title:"Design Inspirations for 2024", Image:"/images/blog4.png"},
+                  {title:"It is long established fact" , Date:"Aug 09 2020" , Image:"/images/blog10.png"},
+                  {title:"It is long established fact", Date:"Aug 09 2020" , Image:"/images/blog4.png"},
+                  {title:"It is long established fact", Date:"Aug 09 2020" , Image:"/images/blog5.png"},
+                  {title:"It is long established fact", Date:"Aug 09 2020" , Image:"/images/blog6.png"},
                 ].map((post, index) => (
-                  <li key={index}>
-                   <p>{post.title}</p>
+                  <li key={index} className="flex gap-5">
                    <Image
                    src={post.Image}
                    alt={post.title}
                    width={100}
                    height={100}
                    ></Image>
+                  <div className="mt-2 font-serif">
+                    <p className="text-blue-950">{post.title}</p>
+                    <p className="text-gray-400">{post.Date}</p>
+                  </div>
+                </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold font-serif mb-3">Sale Product</h3>
+              <ul className="space-y-2">
+                {[
+                  {title:"Elit ornare in enim mauris." , Date:"Aug 09 2020" , Image:"/images/blog7.png"},
+                  {title:"Viverra pulvinar et enim.", Date:"Aug 09 2020" , Image:"/images/blog8.png"},
+                  {title:"Mattis varius donec fdsfd", Date:"Aug 09 2020" , Image:"/images/blog9.png"},
+                ].map((post, index) => (
+                  <li key={index} className="flex gap-5">
+                   <Image
+                   src={post.Image}
+                   alt={post.title}
+                   width={100}
+                   height={100}
+                   ></Image>
+                   <div className="mt-2 font-serif">
+                      <p className="text-blue-950">{post.title}</p>
+                      <p className="text-gray-400">{post.Date}</p>
+                    </div>
                   </li>
                 ))}
               </ul>
             </div>
   
             <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3">Sale Product</h3>
+              <h3 className="text-lg font-semibold font-serif mb-3">Offer Product</h3>
               <div className="grid grid-cols-2 gap-4">
-                {["/images/blog10.png", "/images/blog9.png"].map(
+                {[
+                  {title:"Duis lectus est.", price:"$12.00 - $15.00" , Image:"/images/blog13.png"}, 
+                  {title:"Sed placerat." , price:"$12.00 - $15.00" , Image:"/images/product1.png"},
+                  {title:"Netus Proin", price:"$12.00 - $15.00"  , Image:"/images/blog11.png"},
+                  {title:"Platea in.", price:"$12.00 - $15.00" , Image:"/images/blog12.png"},
+                ].map(
                   (src, index) => (
-                    <Image
+                   <div>
+                      <Image
                       key={index}
-                      src={src}
+                      src={src.Image}
                       alt="Product"
-                      width={50}
-                      height={50}
-                      className="w-full h-20 object-cover rounded"
-                    ></Image>
-                  )
-                )}
+                      width={80}
+                      height={80}
+                      className="w-20 h-20 object-cover rounded"
+                      ></Image>
+                      <p className="text-md text-blue-950 font-serif">{src.title}</p>
+                      <p className="text-gray-400 text-sm font-serif">{src.price}</p>
+                    </div>
+                  ))}
               </div>
             </div>
   
             <div>
               <h3 className="text-lg font-semibold mb-3">Tags</h3>
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "CSS", "Tailwind", "UI/UX"].map((tag) => (
+                {["General", "Insas", "Atsanil", "Bibsaas", "Nulla"].map((tag) => (
                   <span
                     key={tag}
-                    className="bg-gray-200 px-2 py-1 text-sm rounded cursor-pointer hover:bg-gray-300"
+                    className="text-blue-950 px-2 py-1 text-lg underline underline-offset-1 rounded cursor-pointer hover:text-pink-600"
                   >
                     {tag}
                   </span>
