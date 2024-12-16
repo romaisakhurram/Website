@@ -111,6 +111,8 @@ export default function Blog() {
                       key={index}
                       src={src}
                       alt="Product"
+                      width={50}
+                      height={50}
                       className="w-full h-20 object-cover rounded"
                     ></Image>
                   )
