@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { HiOutlineMagnifyingGlass} from "react-icons/hi2";
 export default  function Header () {
     return (
         <div className="w-full h-20 items-center p-5">

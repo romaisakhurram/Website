@@ -9,6 +9,7 @@ export default function Blog() {
         excerpt:
           "Praesent nonummy mi in odio. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.",
         image: "/images/blog1.png",
+       
       },
       {
         id: 2,
@@ -16,6 +17,7 @@ export default function Blog() {
         excerpt:
           "Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu.",
         image: "/images/blog2.png",
+        
       },
       {
         id: 3,
@@ -23,6 +25,7 @@ export default function Blog() {
         excerpt:
           "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur blandit mollis lacus. Nam quam nunc, blandit vel.",
         image: "/images/blog3.png",
+        
       },
     ];
   
@@ -44,7 +47,7 @@ export default function Blog() {
                   <h2 className="text-xl font-semibold mb-3">{post.title}</h2>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
                   <Link
-                    href="#"
+                    href="/Blog1"
                     className="text-blue-600 font-medium hover:underline"
                    >
                     Read More →
@@ -72,7 +75,7 @@ export default function Blog() {
                   (category, index) => (
                     <li key={index}>
                      <Link
-                        href="#"
+                        href="/Blog1"
                         className="hover:text-blue-600 hover:underline"
                       >
                         {category}
