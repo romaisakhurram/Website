@@ -91,11 +91,11 @@ export default function Shop () {
     return (
         <header>
            <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-               <h1 className="text-[30px] font-serif font-bold">Product Details</h1>
+               <h1 className="text-[30px] font-serif font-bold">Shop Lists</h1>
                 <ul className="flex gap-2">
                   <li>Home_</li>
                   <li>Pages_</li>
-                  <li className="text-pink-600">Product Details</li>
+                  <li className="text-pink-600">Shop List</li>
                 </ul>
             </div>
            <div className="w-full h-full flex justify-center flex-wrap mt-15 p-5">
