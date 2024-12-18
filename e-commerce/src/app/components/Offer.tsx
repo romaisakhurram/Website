@@ -32,8 +32,8 @@ export default function Feature () {
         <div className="w-full h-[800] mt-10 p-5">
           <h1 className="text-[40px] font-serif font-bold text-[#1A0B5B] text-center">What Shopex Offer!</h1>
           <div className="flex justify-center gap-10">
-           {data.map ((Idata) => (
-            <div className=" mt-10 bg-white w-[250px] h-[250px] border border-gray-300 rounded-xl">
+           {data.map ((Idata,index) => (
+            <div key={index} className=" mt-10 bg-white w-[250px] h-[250px] border border-gray-300 rounded-xl">
                 <div className="flex rounded-xl">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 

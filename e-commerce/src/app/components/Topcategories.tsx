@@ -32,8 +32,8 @@ export default function Feature () {
         <div className="w-full h-[800] mt-10 p-5">
           <h1 className="text-[40px] font-serif font-bold text-blue-900 text-center">Top Categories</h1>
           <div className="flex justify-center gap-10">
-           {data.map ((Idata) => (
-            <div className=" mt-20 bg-white w-[500] h-[200]">
+           {data.map ((Idata,index) => (
+            <div key={index} className=" mt-20 bg-white w-[500] h-[200]">
                 <div className="flex bg-[#F2F0FF] w-[250px] h-[250px] rounded-full hover:border hover:border-blue-900 hover:border-spacing-1.5">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 

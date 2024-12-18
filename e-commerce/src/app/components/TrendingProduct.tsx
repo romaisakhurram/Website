@@ -36,8 +36,8 @@ export default function TrendingProduct () {
         <div className="w-full h-[800] mt-20 p-5">
           <h1 className="text-[40px] font-serif font-bold text-[#1A0B5B] text-center">Trending Product</h1>
           <div className="flex justify-center gap-5">
-           {data.map ((Idata) => (
-            <div className=" mt-10 w-[500] h-[150] shadow-lg border border-gray-300 rounded-lg ">
+           {data.map ((Idata,index) => (
+            <div key={index} className=" mt-10 w-[500] h-[150] shadow-lg border border-gray-300 rounded-lg ">
                 <div className="flex m-2 bg-[#F2F0FF] w-[218px] h-[182px] rounded-lg ">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 

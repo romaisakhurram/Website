@@ -122,8 +122,8 @@ export default function Product () {
             <h1 className="text-md text-[#151875] font-serif text-3xl font-semibold  mt-20 ml-20 ">Latest Product</h1>
             <div className="w-full h-[500] flex justify-center gap-10 mt-5">
 
-                {data.map ((Idata) => (
-                    <div className=" mt-1 w-[500] h-[200] ">
+                {data.map ((Idata,index) => (
+                    <div key={index} className=" mt-1 w-[500] h-[200] ">
                         <div className="flex w-[300] h-[300] ">
                             <Image src={Idata.Image} 
                               alt={Idata.title} 

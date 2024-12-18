@@ -56,8 +56,8 @@ export default function Latest () {
                <li className="hover:text-pink-600 hover:underline hover:hover:underline-offset-2">Special Offer</li>
            </ul>
          
-           {data.map ((Idata) => (
-            <div className="w-[350px] h-[300px] m-[30px] p-[10px] gap-5">
+           {data.map ((Idata,index) => (
+            <div key={index} className="w-[350px] h-[300px] m-[30px] p-[10px] gap-5">
                 <div className=" bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[600] h-[400]">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 

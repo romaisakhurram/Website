@@ -36,8 +36,8 @@ export default function Feature () {
         <div className="w-full h-[800] mt-20 p-5">
           <h1 className="text-[40px] font-serif font-bold text-[#1A0B5B] text-center">Feature Product</h1>
           <div className="flex justify-center gap-10">
-           {data.map ((Idata) => (
-            <div className=" mt-20 bg-white w-[500] h-[200] shadow-lg border border-gray-300 rounded-xl">
+           {data.map ((Idata,index) => (
+            <div key={index} className=" mt-20 bg-white w-[500] h-[200] shadow-lg border border-gray-300 rounded-xl">
                 <div className="flex bg-[#F2F0FF] w-[300] h-[300] rounded-xl">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 

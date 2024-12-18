@@ -120,8 +120,8 @@ export default function Shop () {
                     </div>
                 </div>
                 
-                {data.map ((Idata) => (
-                   <div className="w-[250px] h-[300px] m-[30px] p-[10px] gap-5">
+                {data.map ((Idata,index) => (
+                   <div key={index} className="w-[250px] h-[300px] m-[30px] p-[10px] gap-5">
                        <div className=" bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[500] h-[600]">
                          <Image src={Idata.Image} 
                          alt={Idata.title} 

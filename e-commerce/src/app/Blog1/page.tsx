@@ -6,11 +6,10 @@ import { MdOutlineAccountBox } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { BiCommentDetail } from "react-icons/bi";
 import { HiOutlineMagnifyingGlass} from "react-icons/hi2";
-import Link from "next/link"
 export default function Blog1 () {
     
-    return (
-     <header>
+  return (
+    <header>
         <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
           <h1 className="text-[30px] font-serif font-bold">Single Blog</h1>
             <ul className="flex gap-2">
@@ -33,15 +32,15 @@ export default function Blog1 () {
                 ></Image>
                 <div>
                   <h2 className="text-xl font-semibold mb-3">Mauris at orci non vulputate diam tincidunt nec.</h2>
-                  <p className="text-gray-400 mb-5">"Praesent nonummy mi in odio. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum."</p>
+                  <p className="text-gray-400 mb-5">Praesent nonummy mi in odio. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.</p>
                 </div>
                 <p className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
               </div>
               <div className="bg-[#FAFAFB] p-2 mb-10 ">
                 <p className="text-gray-400 font-sans">
-                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat
-                  toamk risusu”
+                  toamk risusu.
                 </p>
               </div>
               
