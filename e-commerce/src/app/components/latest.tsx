@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Latest () {
+export default function latest () {
     const data = [ 
     {
         id:1,
