@@ -1,6 +1,6 @@
 import Hero from "./components/Hero"
 import Feature from "./components/Feature"
-import Latest from "./components/Latest"
+import Leatest from "./components/Leatest"
 import Offer from "./components/Offer"
 import UniqueFeature from "./components/UniqueFeature"
 import TrendingProduct from "./components/TrendingProduct"
@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Hero/>
       <Feature/>
-      <Latest/>
+      <Leatest/>
       <Offer/>
       <UniqueFeature/>
       <TrendingProduct/>
