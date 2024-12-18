@@ -265,11 +265,9 @@ export default function Blog1 () {
                   {title:"Sed placerat." , price:"$12.00 - $15.00" , Image:"/images/product1.png"},
                   {title:"Netus Proin", price:"$12.00 - $15.00"  , Image:"/images/blog11.png"},
                   {title:"Platea in.", price:"$12.00 - $15.00" , Image:"/images/blog12.png"},
-                ].map(
-                  (src, index) => (
-                   <div>
+                ].map((src, index) => (
+                   <div key={index}>
                       <Image
-                      key={index}
                       src={src.Image}
                       alt="Product"
                       width={80}
@@ -286,9 +284,9 @@ export default function Blog1 () {
             <div>
               <h3 className="text-lg font-semibold mb-3">Tags</h3>
               <div className="flex flex-wrap gap-2">
-                {["General", "Insas", "Atsanil", "Bibsaas", "Nulla"].map((tag) => (
+                {["General", "Insas", "Atsanil", "Bibsaas", "Nulla"].map((tag,index) => (
                   <span
-                    key={tag}
+                    key={index}
                     className="text-blue-950 px-2 py-1 text-lg underline underline-offset-1 rounded cursor-pointer hover:text-pink-600"
                   >
                     {tag}

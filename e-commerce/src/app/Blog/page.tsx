@@ -43,8 +43,8 @@ export default function Blog() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {posts.map((post) => (
-              <div key={post.id} className="mb-10 bg-white shadow rounded-lg">
+            {posts.map((post,index) => (
+              <div key={index} className="mb-10 bg-white shadow rounded-lg">
                 <Image
                   src={post.image}
                   alt={post.title}
