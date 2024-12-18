@@ -1,4 +1,4 @@
-
+import { HiOutlineMagnifyingGlass} from "react-icons/hi2";
 import Image from "next/image"
 import Link from "next/link"
 export default function Blog() {
@@ -6,7 +6,7 @@ export default function Blog() {
       {
         id: 1,
         title: "Mauris at orci non vulputate diam tincidunt nec.",
-        excerpt:
+        desc:
           "Praesent nonummy mi in odio. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.",
         image: "/images/blog1.png",
        
@@ -14,7 +14,7 @@ export default function Blog() {
       {
         id: 2,
         title: "Aenean vitae in aliquam ultricies lectus. Etiam.",
-        excerpt:
+        desc:
           "Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu.",
         image: "/images/blog2.png",
         
@@ -22,7 +22,7 @@ export default function Blog() {
       {
         id: 3,
         title: "Sit nam congue feugiat nisl, mauris amet nisi.",
-        excerpt:
+        desc:
           "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur blandit mollis lacus. Nam quam nunc, blandit vel.",
         image: "/images/blog3.png",
         
@@ -30,7 +30,16 @@ export default function Blog() {
     ];
   
     return (
-      <div className="container mx-auto px-4 lg:px-20 py-10">
+      <header>
+        <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
+          <h1 className="text-[30px] font-serif font-bold"> Blog</h1>
+            <ul className="flex gap-2">
+              <li>Home_</li>
+              <li>Pages_</li>
+              <li className="text-pink-600">Blog</li>
+            </ul>
+        </div>
+      <div className="container w-full  mx-auto px-4 lg:px-20 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
@@ -45,7 +54,7 @@ export default function Blog() {
                 />
                 <div className="p-6">
                   <h2 className="text-xl font-semibold mb-3">{post.title}</h2>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                  <p className="text-gray-600 mb-4">{post.desc}</p>
                   <Link
                     href="/Blog1"
                     className="text-blue-600 font-medium hover:underline"
@@ -61,25 +70,27 @@ export default function Blog() {
            <aside>
             <div className="mb-8">
               <h3 className="text-lg font-semibold mb-3">Search  </h3>
-              <input 
+              <button className="flex w-60 border border-gray-300">  
+                <input 
                 type="text"
                 placeholder="Search..."
-                className="w-full border rounded p-2" 
-              />
+                className="w-full rounded p-2" 
+                /><HiOutlineMagnifyingGlass className="w-20 h-30 ml-20 mt-3"/>
+              </button>
             </div>
   
             <div className="mb-8">
               <h3 className="text-lg font-semibold mb-3">Categories</h3>
               <ul className="text-gray-600 space-y-2">
-                {["Design", "Development", "Lifestyle", "Travel"].map(
+                {["Women", "Women", "Women", "Women"].map(
                   (category, index) => (
                     <li key={index}>
-                     <Link
-                        href="/Blog1"
-                        className="hover:text-blue-600 hover:underline"
-                      >
-                        {category}
-                      </Link>
+                    <span
+                    key={category}
+                    className="text-blue-950 px-2 py-1 text-lg rounded cursor-pointer hover:text-pink-600"
+                  >
+                    {category}
+                  </span>
                     </li>
                   )
                 )}
@@ -176,6 +187,7 @@ export default function Blog() {
           </aside>
         </div>
       </div>
-    );
-  }
+    </header>
+  );
+}
   

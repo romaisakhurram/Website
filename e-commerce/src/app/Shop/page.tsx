@@ -89,15 +89,16 @@ export default function Shop () {
     ]
 
     return (
+        <header>
+           <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
+               <h1 className="text-[30px] font-serif font-bold">Product Details</h1>
+                <ul className="flex gap-2">
+                  <li>Home_</li>
+                  <li>Pages_</li>
+                  <li className="text-pink-600">Product Details</li>
+                </ul>
+            </div>
            <div className="w-full h-full flex justify-center flex-wrap mt-15 p-5">
-                <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10 mb-5">
-                   <h1 className="text-3xl font-serif font-bold">Grid Default</h1>
-                   <ul className="flex gap-2">
-                      <li>Home_</li>
-                      <li>Pages_</li>
-                      <li className="text-pink-600">MyAccount</li>
-                    </ul>
-                </div>
                 <div className="flex justify-center p-5">
                     <div>
                        <h1 className="text-3xl font-bold font-serif">Ecommerce Accessories & Fashion Item</h1>
@@ -119,7 +120,7 @@ export default function Shop () {
                     </div>
                 </div>
                 
-                  {data.map ((Idata) => (
+                {data.map ((Idata) => (
                    <div className="w-[250px] h-[300px] m-[30px] p-[10px] gap-5">
                        <div className=" bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[500] h-[600]">
                          <Image src={Idata.Image} 
@@ -134,16 +135,17 @@ export default function Shop () {
                          <p className="text-gray-400 text-sm">{Idata.price}<del className="text-pink-600">{Idata.delPrice}</del></p>
                        </div>
                    </div>
-                   ))}
-                   <div>
-                       <Image
+                ))}
+                <div>
+                    <Image
                        src="/images/Signatures.png"
                        alt="Signature"
                        width={500}
                        height={500}
                        className=" ml-[10%] mt-5"
-                        ></Image>
-                   </div>
-               </div>      
+                    ></Image>
+                </div>
+            </div>    
+        </header>  
     )
 }

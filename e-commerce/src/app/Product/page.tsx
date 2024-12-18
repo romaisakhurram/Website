@@ -34,16 +34,17 @@ export default function Product () {
         ]
 
     return(
+    <header>
+        <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
+          <h1 className="text-[30px] font-serif font-bold">Product Details</h1>
+            <ul className="flex gap-2">
+              <li>Home_</li>
+              <li>Pages_</li>
+              <li className="text-pink-600">Product Details</li>
+            </ul>
+        </div>
         <div className="w-full h-[800]">
-           <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10 mb-5">
-               <h1 className="text-[30px] font-serif font-bold">Product Details</h1>
-                <ul className="flex gap-2 text-sm">
-                  <li>Home_</li>
-                  <li>Pages_</li>
-                  <li className="text-pink-600">Product Details</li>
-                </ul>
-            </div>
-            <div className="flex justify-center items-center border border-white shadow-lg w-[60%] h-[300px] p-3 mt-10 ml-[25%] gap-5">
+            <div className="flex justify-center items-center border border-white shadow-lg w-[60%] h-[300px] p-3 mt-10 ml-[20%] gap-5">
                 <div>
                     <div>
                        <Image
@@ -149,5 +150,6 @@ export default function Product () {
             </div>
 
         </div>
+    </header>
     )
 }

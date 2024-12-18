@@ -10,11 +10,19 @@ import Link from "next/link"
 export default function Blog1 () {
     
     return (
+     <header>
+        <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
+          <h1 className="text-[30px] font-serif font-bold">Single Blog</h1>
+            <ul className="flex gap-2">
+              <li>Home_</li>
+              <li>Pages_</li>
+              <li className="text-pink-600">Single Blog</li>
+            </ul>
+        </div>
       <div className="container mx-auto px-4 lg:px-20 py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-    
               <div className="mb-10 bg-white">
                 <Image
                   src="/images/blog1.png"
@@ -155,7 +163,6 @@ export default function Blog1 () {
                   <textarea
                     placeholder="Write your comment"
                     className=" p-2 w-full mt-4"
-                    rows="6"
                   ></textarea>
                 </button>
                 
@@ -177,27 +184,26 @@ export default function Blog1 () {
            <aside>
             <div className="mb-8">
               <h3 className="text-lg font-semibold mb-3">Search  </h3>
-              <button className="flex w-80 border border-gray-300">  
+              <button className="flex w-60 border border-gray-300">  
                 <input 
                   type="text"
                   placeholder="Search..."
                   className="w-full rounded p-2" 
-                /><HiOutlineMagnifyingGlass className="w-40 h-30 mt-3"/>
+                /><HiOutlineMagnifyingGlass className="w-20 h-30 ml-20 mt-3"/>
               </button>
             </div>
   
             <div className="mb-8">
               <h3 className="text-lg font-semibold mb-3">Categories</h3>
               <ul className="text-gray-600 space-y-2">
-                {["Design", "Development", "Lifestyle", "Travel"].map(
+                {["Women", "Women", "Women", "Women"].map(
                   (category, index) => (
                     <li key={index}>
-                     <Link
-                        href="#"
-                        className="hover:text-blue-600 hover:underline"
+                     <span
+                        className="text-blue-950 px-2 py-1 text-lg rounded cursor-pointer hover:text-pink-600"
                       >
                         {category}
-                      </Link>
+                      </span>
                     </li>
                   )
                 )}
@@ -293,7 +299,17 @@ export default function Blog1 () {
             </div>
           </aside>
         </div>
+        <div>
+          <Image
+          src="/images/Signatures.png"
+          alt="Signature"
+          width={500}
+          height={500}
+          className="m-8 ml-[30%]"
+          ></Image>
+        </div>
       </div>
-    );
-  }
+    </header>  
+  );
+}
   
