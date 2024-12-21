@@ -1,3 +1,6 @@
+import { CiHeart } from "react-icons/ci";
+import { MdOutlineLocalGroceryStore } from "react-icons/md";
+import { FaSearchPlus } from "react-icons/fa";
 import Image from "next/image"
 
 export default function Leatest () {
@@ -58,12 +61,17 @@ export default function Leatest () {
          
            {data.map ((Idata,index) => (
             <div key={index} className="w-[350px] h-[300px] m-[30px] p-[10px] gap-5">
-                <div className=" bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[600] h-[400]">
+                <div className="bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[600] h-[400]">
+                  <div className="mt-5 text-[#1A0B5B]">
+                        <CiHeart className="w-8 h-6"/>
+                        <MdOutlineLocalGroceryStore className="w-8 h-6"/> 
+                        <FaSearchPlus className="w-8 h-4"/>
+                    </div> 
                   <Image src={Idata.Image} 
                   alt={Idata.title} 
-                  width={250} 
-                  height={250} 
-                  className="w-75 h-60 p-3 ml-5"
+                  width={650} 
+                  height={650} 
+                  className="w-60 h-60 ml-5"
                   ></Image>
                 </div>
                 <div className="p-2 flex justify-between font-serif text-center">

@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -37,13 +38,13 @@ export default function BlogPage () {
                   alt={Idata.title} 
                   width={220} 
                   height={180}
-                  className="w-[98%] h-[98%] m-2 rounded-lg"
+                  className="w-[60%] h-[60%] m-2 rounded-lg"
                    ></Image>
                 </div>
                 <div className="w-[300px] h-[160px] p-5">
                   <span className="text-blue-900 hover:text-pink-600 font-serif text-[20px]">{Idata.title}</span><br />
                   <span className="text-gray-400 text-[16px]">{Idata.desc}</span><br />
-                  <button className="text-blue-900 underline underline-offset-1 hover:text-pink-600"><Link href="/">{Idata.button}</Link></button>
+                  <button className="text-blue-900 underline underline-offset-1 hover:text-pink-600"><Link href="/Blog1">{Idata.button}</Link></button>
                 </div>
             </div>
             ))}

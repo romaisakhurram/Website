@@ -44,13 +44,13 @@ export default function Blog() {
           {/* Main Content */}
           <div className="lg:col-span-2">
             {posts.map((post,index) => (
-              <div key={index} className="mb-10 bg-white shadow rounded-lg">
+              <div key={index} className="mb-10 bg-white">
                 <Image
                   src={post.image}
                   alt={post.title}
-                  width={100}
-                  height={100}
-                  className="w-full h-64 object-cover rounded-t-lg"
+                  width={800}
+                  height={300}
+                  className="w-[60]% h-70 object-cover "
                 />
                 <div className="p-6">
                   <h2 className="text-xl font-semibold mb-3">{post.title}</h2>

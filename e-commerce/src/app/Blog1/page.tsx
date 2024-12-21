@@ -26,9 +26,9 @@ export default function Blog1 () {
                 <Image
                   src="/images/blog1.png"
                   alt="blog image"
-                  width={100}
-                  height={100}
-                  className="w-full h-70 object-cover mb-5 "
+                  width={800}
+                  height={300}
+                  className="w-[60]% h-70  object-cover mb-5 "
                 ></Image>
                 <div>
                   <h2 className="text-xl font-semibold mb-3">Mauris at orci non vulputate diam tincidunt nec.</h2>
@@ -138,7 +138,7 @@ export default function Blog1 () {
             </div>
           </div>
 
-          <div className="container mx-auto px-4 mt-8 bg-white p-6 ">
+          <div className="container mx-auto px-2 mt-8 bg-white p-4 ">
              <form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <button className="flex border border-gray-300">
@@ -195,12 +195,11 @@ export default function Blog1 () {
             <div className="mb-8">
               <h3 className="text-lg font-semibold mb-3">Categories</h3>
               <ul className="text-gray-600 space-y-2">
-                {["Women", "Women", "Women", "Women"].map(
+                {["Women(21)", "Women(10)", "Women(9)", "Women(5)"].map(
                   (category, index) => (
                     <li key={index}>
                      <span
-                        className="text-blue-950 px-2 py-1 text-lg rounded cursor-pointer hover:text-pink-600"
-                      >
+                        className="text-blue-950 px-2 py-1 text-lg rounded cursor-pointer hover:text-pink-600">
                         {category}
                       </span>
                     </li>

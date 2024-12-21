@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Feature () {
+export default function Offer () {
     const data = [ 
     {
         id:1,
@@ -39,7 +39,7 @@ export default function Feature () {
                   alt={Idata.title} 
                   width={100} 
                   height={100}
-                  className="w-30 h-30 p-2 ml-[30%]"
+                  className="w-20 h-20 p-2 mt-2 ml-[30%]"
                    ></Image>
                 </div>
                 <div className="p-3 text-center">

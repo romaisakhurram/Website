@@ -1,118 +1,93 @@
 import Image from "next/image"
+import { FaSearchPlus } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { MdOutlineLocalGroceryStore } from "react-icons/md";
 
 export default function Shop () {
     const data = [ 
     {
         id:1,
-        title :"Vel elit euismod",
+        title :"Accumsan tincidunt",
         price:"$26.00",
         delPrice:"$42.00",
-        Image: "/images/shop1.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image: "/images/shopPic1.png"
     },
     {
         id:2,
-        title :"Ultricies condimentum imperdiet",
+        title :"In nulla",
         price:"$26.00",
         delPrice:"$42.00",
-        Image : "/images/shop2.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image : "/images/shopPic2.png"
     },
     {
         id:3,
-        title :"Vitae suspendisse sed",
+        title :"Vel sem",
         price:"$26.00",
         delPrice:"$42.00",
-        Image : "/images/shop3.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image : "/images/shopPic3.png"
     },
     {
         id:4,
-        title :"Sed at fermentum",
+        title :"Porttitor cum",
         price:"$26.00",
         delPrice:"$42.00",
-       Image : "/images/shop4.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image : "/images/shopPic4.png"
     },
     {
         id:5,
-        title :"Fusce pellentesque at",
+        title :"Nunc in",
         price:"$26.00",
         delPrice:"$42.00",
-       Image : "/images/shop5.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image : "/images/shopPic5.png"
     },
     {
         id:6,
-        title :"Vestibulum magna laoreet",
+        title :"Vitae facilisis",
         price:"$26.00",
         delPrice:"$42.00",
-       Image : "/images/shop6.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image : "/images/shopPic6.png"
     },
     {
         id:7,
-        title :"Sollicitudin amet orci",
+        title :"Curabitur lectus",
         price:"$26.00",
         delPrice:"$42.00",
-       Image : "/images/shop7.png"
-    },
-    {
-        id:8,
-        title :"Ultrices mauris sit",
-        price:"$26.00",
-        delPrice:"$42.00",
-       Image : "/images/shop8.png"
-    },
-    {
-        id:9,
-        title :"Pellentesque condimentum",
-        price:"$26.00",
-        delPrice:"$42.00",
-       Image : "/images/shop9.png"
-    },
-    {
-        id:10,
-        title :"Cras scelerisque velit",
-        price:"$26.00",
-        delPrice:"$42.00",
-       Image : "/images/shop10.png"
-    },
-    {
-        id:11,
-        title :"Lectus vulputate faucibus",
-        price:"$26.00",
-        delPrice:"$42.00",
-       Image : "/images/shop11.png"
-    },
-    {
-        id:12,
-        title :"Purus risus, ut",
-        price:"$26.00",
-        delPrice:"$42.00",
-       Image : "/images/shop4.png"
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+        Image : "/images/shopPic7.png"
     },
     ]
 
     return (
         <header>
            <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-               <h1 className="text-[30px] font-serif font-bold">Shop Lists</h1>
+               <h1 className="text-[30px] text-[#101750] font-[JosefinSans] font-bold">Shop Lists</h1>
                 <ul className="flex gap-2">
                   <li>Home_</li>
                   <li>Pages_</li>
                   <li className="text-pink-600">Shop List</li>
                 </ul>
             </div>
-           <div className="w-full h-full flex justify-center flex-wrap mt-15 p-5">
+           <div className="w-full h-[800] flex justify-center flex-wrap mt-15 p-5">
                 <div className="flex justify-center p-5">
                     <div>
-                       <h1 className="text-3xl font-bold font-serif">Ecommerce Accessories & Fashion Item</h1>
-                        <p className="text-sm text-gray-400">About 9,620 results(0.62 seconds)</p>
+                       <h1 className="text-3xl text-[#151875] font-bold font-serif">Ecommerce Accessories & Fashion Item</h1>
+                        <p className="text-sm text-[#8A8FB9]">About 9,620 results(0.62 seconds)</p>
                     </div>
 
-                    <div className="flex justify-center gap-5">
+                    <div className="flex justify-center text-[#3F509E] gap-5">
                        <label htmlFor="number">Per Page:</label>
                        <input type="number" name="number" 
                        className="w-[5%] h-8 border border-gray-400" />
 
                        <label htmlFor="text">Sort By:</label>
-                       <input type="text" name="number" placeholder="Best Watch"
-                       className=" w-[10%] h-8 border border-gray-400 text-md" />
+                       <input type="text" name="text" placeholder="Best Watch"
+                       className=" w-[12%] h-8 border border-gray-400  text-sm" />
 
                        <label htmlFor="number">Views:</label>
                        <input type="number" name="number" 
@@ -121,20 +96,26 @@ export default function Shop () {
                 </div>
                 
                 {data.map ((Idata,index) => (
-                   <div key={index} className="w-[250px] h-[300px] m-[30px] p-[10px] gap-5">
-                       <div className=" bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[500] h-[600]">
-                         <Image src={Idata.Image} 
-                         alt={Idata.title} 
-                         width={250} 
-                         height={200} 
-                         className="w-75 h-60 p-3"
-                         ></Image>
-                       </div>
-                       <div className="p-2 font-serif text-center">
-                         <h2 className="font-bold text-blue-950 text-sm">{Idata.title}</h2>
-                         <p className="text-gray-400 text-sm">{Idata.price}<del className="text-pink-600">{Idata.delPrice}</del></p>
-                       </div>
-                   </div>
+                     <div key={index} className=" mt-10 w-[200] h-[400] flex justify-center gap-5 shadow-lg ">
+                        <div className="w-[300] h-[350] ">
+                            <Image src={Idata.Image} 
+                            alt={Idata.title} 
+                            width={100} 
+                            height={100}
+                            className="w-60 h-40 "
+                            ></Image>
+                        </div>
+                        <div className="font-bold mt-2 p-2">
+                           <h2 className="text-[#111C85] font-[JosefinSans] text-lg">{Idata.title}</h2>
+                           <p className="text-[#111C85] text-md">{Idata.price} <del className="text-[#FF2AAA]">{Idata.delPrice}</del></p>
+                           <p className="text-[#9295AA] font[Lato] text-sm">{Idata.desc}</p>
+                            <ul className="flex mt-2">
+                                <li><FaSearchPlus className="w-6 h-5"/></li>
+                                <li><CiHeart className="w-8 h-6 "/></li>
+                                <li><MdOutlineLocalGroceryStore className="w-8 h-6"/></li>
+                            </ul>
+                        </div>
+                    </div>
                 ))}
                 <div>
                     <Image
@@ -142,7 +123,7 @@ export default function Shop () {
                        alt="Signature"
                        width={500}
                        height={500}
-                       className=" ml-[10%] mt-5"
+                       className=" ml-[10%] mt-10"
                     ></Image>
                 </div>
             </div>    
