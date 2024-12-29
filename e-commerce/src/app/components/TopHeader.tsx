@@ -48,9 +48,11 @@ export default function TopHeader() {
                 <FaRegUser className="w-4 h-4" />
               </Link>
             </li>
-            <li className="flex items-center gap-1">
-              Wishlist
-              <CiHeart className="w-6 h-6" />
+            <li>
+              <Link href="/Pages/About"  className="flex items-center gap-1">
+                Wishlist
+                <CiHeart className="w-6 h-6" />
+              </Link>
             </li>
             <li>
               <Link href="/ShoppingCart"><MdOutlineLocalGroceryStore className="w-6 h-6" /></Link>

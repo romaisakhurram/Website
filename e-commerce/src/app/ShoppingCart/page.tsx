@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link"
+
 export default function ShoppingCart() {
     return (
     <header>
@@ -124,7 +126,7 @@ export default function ShoppingCart() {
                 * Shipping & taxes calculated at checkout
               </p>
               <button className="bg-green-500 text-white w-full py-2 rounded-md mt-4 hover:bg-green-600">
-                 Proceed to Checkout
+                <Link href="/Pages"> Proceed to Checkout</Link>
               </button>
             </div>
 

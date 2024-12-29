@@ -13,12 +13,12 @@ export default function Discount () {
             </ul>
             <div className=" w-[80%] h-[500px] flex justify-center ml-40">
                 <div className="mt-20 ">
-                    <li className="text-[35px] font-bold font-serif text-blue-900">20% off Discount of all Products</li><br />
+                    <h2 className="text-[35px] font-bold font-serif text-blue-900">20% off Discount of all Products</h2><br />
                     <p className="text-[20px] text-pink-600">Eams Sofa Compact</p><br />
                     <p className="text-[20px] text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.</p><br />
                     <p className="text-[18px] text-gray-400 flex "><TiTick />Material expose like metals &nbsp; &nbsp;<TiTick />Clear lines and geomatric figures</p><br />
                     <p className="text-[18px] text-gray-400 flex"><TiTick />Simple neutral colours. &nbsp; &nbsp; <TiTick />Material expose like metals</p><br />
-                    <button className="w-40 h-[40px] bg-pink-600 text-white text-[15px]"><Link href="/ShopGrid">Shop Now</Link></button>
+                    <button className="w-40 h-[40px] bg-pink-600 text-white text-[15px]"><Link href="/ShopLeftSide">Shop Now</Link></button>
                 </div>
                 <div className=" mt-20 bg-pink-100 rounded-full">
                   <Image

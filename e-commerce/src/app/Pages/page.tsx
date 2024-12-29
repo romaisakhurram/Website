@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"
 export default function Pages () {
     return (
         <div className="w-full h-[800]">
@@ -101,7 +102,7 @@ export default function Pages () {
                             </label>
                         </div>
                         <button className="w-[85%] h-10 bg-green-500 ml-5 mb-3 text-white py-2 rounded-md hover:bg-green-600">
-                           Proceed To Checkout
+                          <Link href="/OrderCompleted">Proceed To Checkout</Link>
                         </button>
                     </div>
 
