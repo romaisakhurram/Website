@@ -50,9 +50,9 @@ export default function Leatest () {
     ]
 
     return (
-        <div className="w-full h-full flex justify-center flex-wrap mt-15 p-5">
-          <h1 className="text-[40px] font-serif ml-[30%] mr-[30%] mt-[5%] font-bold text-[#1A0B5B] text-center duration-75">Leatest Product</h1>
-           <ul className="flex justify-center text-[#1A0B5B] text-[18px] gap-10 ml-[30%] mr-[30%] mt-[2%] ">
+        <div className="w-full h-full flex justify-center flex-wrap mt-5 p-5">
+          <h1 className="text-[40px] font-[Josefin Sans] ml-[30%] mr-[30%] mt-[5%] font-bold text-[#1A0B5B] text-center">Leatest Product</h1>
+           <ul className="flex justify-center text-[#1A0B5B] text-lg gap-10 ml-[30%] mr-[30%] mt-[2%] ">
                <li className="hover:text-pink-600 hover:underline hover:hover:underline-offset-2">New Arrival</li>
                <li className="hover:text-pink-600 hover:underline hover:hover:underline-offset-2">Best Seller</li>
                <li className="hover:text-pink-600 hover:underline hover:hover:underline-offset-2">Featured</li>
@@ -60,29 +60,29 @@ export default function Leatest () {
            </ul>
          
            {data.map ((Idata,index) => (
-            <div key={index} className="w-[350px] h-[350px] relative group overflow-hidden m-[30px] p-[10px] gap-5">
-                <div className="bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[300] h-[300] ">
+            <div key={index} className="w-[350px] h-[350px] relative group overflow-hidden duration-75 m-[30px] p-[10px] gap-5">
+                <div className="bg-[#F2F0FF] items-center shadow-lg w-[300] h-[300] ">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 
                   width={150} 
                   height={100} 
-                  className="w-40 h-60 ml-20 "
+                  className="w-60 h-60 ml-10 p-10"
                   ></Image>
                 </div>
-                <div className="p-2 flex justify-between font-serif text-center">
-                  <h2 className="text-pink-600 text-[18px]">{Idata.title}</h2>
-                  <p className="text-gray-400 text-[18px]">{Idata.price}<del className="text-pink-600">{Idata.delPrice}</del></p>
+                <div className="p-2 flex justify-between font-[JosefinSans] text-center">
+                  <h2 className="text-[#1A0B5B] text-lg">{Idata.title}</h2>
+                  <p className="text-[#1A0B5B] text-lg">{Idata.price}<del className="text-pink-600">{Idata.delPrice}</del></p>
                 </div>
                 
                 <div className="absolute inset-5 bg-opacity-100 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                   <div className="space-x-0 mr-60 text-blue-950">
-                       <CiHeart className="w-8 h-6 mb-1 text-blue-950"/>
-                       <MdOutlineLocalGroceryStore className="w-8 h-6 mb-1 text-blue-950"/> 
-                       <FaSearchPlus className="w-8 h-4 text-blue-950"/>
+                   <div className="mr-20 text-[#1A0B5B]">
+                       <CiHeart className="w-8 h-6 mb-1 text-[#1A0B5B]"/>
+                       <MdOutlineLocalGroceryStore className="w-8 h-6 mb-1 text-[#1A0B5B]"/> 
+                       <FaSearchPlus className="w-8 h-4 text-[#1A0B5B]"/>
                    </div>
                 </div>
                 <div className="mr-60 absolute inset-2 bg-opacity-100 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="px-2 py-2 mt-2 ml-2 bg-blue-950 text-white text-sm font-medium hover:bg-blue-800 rounded-sm">
+                    <button className="px-2 py-2 mt-2 ml-2 bg-[#1A0B5B] text-white text-sm font-medium hover:bg-[#1A0B5B] rounded-sm">
                         Sale
                     </button>
                 </div>

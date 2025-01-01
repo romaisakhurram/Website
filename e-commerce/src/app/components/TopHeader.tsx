@@ -1,4 +1,4 @@
-import { CiHeart } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
@@ -48,11 +48,9 @@ export default function TopHeader() {
                 <FaRegUser className="w-4 h-4" />
               </Link>
             </li>
-            <li>
-              <Link href="/Pages/About"  className="flex items-center gap-1">
+            <li  className="flex items-center gap-1">
                 Wishlist
-                <CiHeart className="w-6 h-6" />
-              </Link>
+              <FaRegHeart  className="w-6 h-6" />
             </li>
             <li>
               <Link href="/ShoppingCart"><MdOutlineLocalGroceryStore className="w-6 h-6" /></Link>

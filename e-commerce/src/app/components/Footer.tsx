@@ -66,15 +66,15 @@ export default function Footer() {
         <div className="bg-gray-200 py-4">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-600">©Webecy - All Rights Reserved.</p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-blue-950 hover:text-gray-800">
-              <CiFacebook />
+            <div className="flex space-x-4 ">
+              <Link href="#" className=" hover:text-gray-800">
+              <CiFacebook className="bg-[#1A0B5B] text-white" />
               </Link>
-              <Link href="#" className="text-blue-950 hover:text-gray-800">
-              <CiInstagram />
+              <Link href="#" className=" hover:text-gray-800">
+              <CiInstagram className="bg-[#1A0B5B] text-white" />
               </Link>
-              <Link href="#" className="text-blue-950 hover:text-gray-800">
-              <CiTwitter />
+              <Link href="#" className=" hover:text-gray-800">
+              <CiTwitter className="bg-[#1A0B5B] text-white" />
               </Link>
             </div>
           </div>

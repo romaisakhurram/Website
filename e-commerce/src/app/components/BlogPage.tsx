@@ -29,7 +29,7 @@ export default function BlogPage () {
 
     return (
         <div className="w-full h-[800] mt-20 p-5">
-          <h1 className="text-[40px] font-serif font-bold text-blue-900 text-center">Latest Blog</h1>
+          <h1 className="text-[40px] font-[JosefinSans] font-bold text-[#1A0B5B]text-center">Latest Blog</h1>
           <div className="flex justify-center gap-10">
            {data.map ((Idata,index) => (
             <div key={index} className=" mt-20 bg-white w-[600] h-[500] shadow-lg border border-gray-300 rounded-xl">
@@ -42,9 +42,9 @@ export default function BlogPage () {
                    ></Image>
                 </div>
                 <div className="w-[300px] h-[160px] p-5">
-                  <span className="text-blue-900 hover:text-pink-600 font-serif text-[20px]">{Idata.title}</span><br />
-                  <span className="text-gray-400 text-[16px]">{Idata.desc}</span><br />
-                  <button className="text-blue-900 underline underline-offset-1 hover:text-pink-600"><Link href="/Blog1">{Idata.button}</Link></button>
+                  <span className="text-[#1A0B5B] hover:text-pink-600 font-[Josefin Sans] text-xl">{Idata.title}</span><br />
+                  <span className="text-[#72718F] font-[Lato] text-md">{Idata.desc}</span><br />
+                  <button className="text-[#1A0B5B] font-[Lato] font-md underline underline-offset-1 hover:text-pink-600"><Link href="/Blog1">{Idata.button}</Link></button>
                 </div>
             </div>
             ))}

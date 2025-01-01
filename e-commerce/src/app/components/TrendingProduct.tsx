@@ -47,8 +47,8 @@ export default function TrendingProduct () {
                    ></Image>
                 </div>
                 <div className="p-2 text-center">
-                  <h2 className="text-blue-900 text-[20px]">{Idata.title}</h2>
-                  <p className="text-blue-900">{Idata.price} <del className="text-gray-400">{Idata.delprice}</del></p>
+                  <h2 className="text-[#1A0B5B] text-md font-bold text-[Lato]">{Idata.title}</h2>
+                  <p className="text-[#1A0B5B] text-[JosefinSans] font-sm">{Idata.price} <del className="text-gray-400">{Idata.delprice}</del></p>
                 </div>
             </div>
             ))}
@@ -56,8 +56,8 @@ export default function TrendingProduct () {
             <div className="w-full h-[500] flex justify-center mt-5 gap-4">
                 <div className="w-[200] h-[150] bg-pink-100 border border-gray-300 p-10">
                     <div>
-                      <h1 className="text-[25px] font-bold font-serif text-blue-900">23% off in all Products</h1>
-                      <span className="text-[15px] text-pink-600 underline underline-offset-3">Shop Now</span>
+                      <h1 className="text-[26px] font-bold font-[Josefin Sans] text-[#1A0B5B]">23% off in all Products</h1>
+                      <span className="text-md text-pink-600 underline underline-offset-3">Shop Now</span>
                     </div>
                    <div>
                       <Image
@@ -71,8 +71,8 @@ export default function TrendingProduct () {
                 </div>
                 <div className="w-[400] h-[200] bg-[#F2F0FF] border border-gray-300 p-10">
                     <div>
-                        <h1 className="text-[25px] font-bold font-serif text-blue-900">23% off in all Products</h1>
-                        <span className="text-[15px] text-pink-600 underline underline-offset-3">Shop Now</span>
+                        <h1 className="text-[26px] font-bold font-[JosefinSans] text-[#1A0B5B]">23% off in all Products</h1>
+                        <span className="text-md text-pink-600 underline underline-offset-3">Shop Now</span>
                     </div>
                     <div>
                      <Image
@@ -92,10 +92,10 @@ export default function TrendingProduct () {
                         alt="chair"
                         height={30}
                         width={40}
-                        className=" w-30 h-10 mt-3"
+                        className=" w-30 h-10 mt-3 p-2"
                         ></Image>
                         </div>
-                        <div className="text-[15px] text-blue-900 p-5">
+                        <div className="text-md text-[#1A0B5B] p-5">
                            <span>Excecutive seats chair</span>
                            <span>$22.00</span>
                         </div>
@@ -108,10 +108,10 @@ export default function TrendingProduct () {
                         alt="chair"
                         height={30}
                         width={40}
-                        className="w-30 h-10 mt-3"
+                        className="w-30 h-10 mt-3 p-2"
                         ></Image>
                         </div>
-                        <div className="text-[15px] text-blue-900 p-5">
+                        <div className="text-md text-[#1A0B5B]p-5">
                            <span>Excecutive seats chair</span>
                            <span>$22.00</span>
                         </div>
@@ -124,10 +124,10 @@ export default function TrendingProduct () {
                         alt="chair"
                         height={30}
                         width={40}
-                        className="w-30 h-10 mt-3"
+                        className="w-30 h-10 mt-3 p-2"
                         ></Image>
                         </div>
-                        <div className="text-[15px] text-blue-900 p-5">
+                        <div className="text-md text-[#1A0B5B] p-5">
                            <span>Excecutive seats chair</span>
                            <span>$22.00</span>
                         </div>

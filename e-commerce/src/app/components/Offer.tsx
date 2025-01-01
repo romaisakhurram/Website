@@ -29,11 +29,11 @@ export default function Offer () {
     ]
 
     return (
-        <div className="w-full h-[800] mt-10 p-5">
-          <h1 className="text-[40px] font-serif font-bold text-[#1A0B5B] text-center">What Shopex Offer!</h1>
+        <div className="w-full h-[800] mt-5 p-5">
+          <h1 className="text-[40px] font-[JosefinSans] font-bold text-[#1A0B5B] text-center">What Shopex Offer!</h1>
           <div className="flex justify-center gap-10">
            {data.map ((Idata,index) => (
-            <div key={index} className=" mt-10 bg-white w-[250px] h-[250px] border border-gray-300 shadow-lg rounded-xl">
+            <div key={index} className=" mt-10 bg-white w-[250px] h-[250px] shadow-xl rounded-md">
                 <div className="flex rounded-xl">
                   <Image src={Idata.Image} 
                   alt={Idata.title} 
@@ -43,8 +43,8 @@ export default function Offer () {
                    ></Image>
                 </div>
                 <div className="p-3 text-center">
-                  <h2 className="text-black text-[25px] font-bold font-serif">{Idata.title}</h2>
-                  <p className="text-gray-300 text-[18px]">{Idata.desc}</p>
+                  <h2 className="text-[#1A0B5B] text-[22px] font-semibold font-serif">{Idata.title}</h2>
+                  <p className="text-gray-300 text-md">{Idata.desc}</p>
                 </div>
             </div>
             ))}
