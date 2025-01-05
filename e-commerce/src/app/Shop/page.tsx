@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { FaSearchPlus } from "react-icons/fa";
-import { CiHeart } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 
 export default function Shop () {
@@ -111,7 +111,7 @@ export default function Shop () {
                            <p className="text-[#9295AA] font[Lato] text-sm">{Idata.desc}</p>
                             <ul className="flex mt-2">
                                 <li><FaSearchPlus className="w-6 h-5"/></li>
-                                <li><CiHeart className="w-8 h-6 "/></li>
+                                <li><FaRegHeart className="w-8 h-6 "/></li>
                                 <li><MdOutlineLocalGroceryStore className="w-8 h-6"/></li>
                             </ul>
                         </div>

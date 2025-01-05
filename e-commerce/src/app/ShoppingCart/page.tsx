@@ -155,7 +155,7 @@ export default function ShoppingCart() {
                 <button
                   type="submit"
                   className="bg-pink-600 text-white w-full py-2 rounded-md hover:bg-violet-700">
-                  Calculate Shipping
+                  <Link href="/Pages">Calculate Shipping</Link>
                 </button>
               </form>
             </div>

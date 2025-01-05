@@ -35,7 +35,7 @@ export default function OrderCompleted () {
                         hours. You will receive an email confirmation when your order is completed.
                     </p>
                     <button className="bg-[#FF1788] w-208 h-59 p-2 text-white font-semibold text-[Lato] text-md">
-                        <Link href="/ShopGrid"> Contine Shopping </Link>
+                        <Link href="/"> Contine Shopping </Link>
                     </button>
                 </div>
                 <div>

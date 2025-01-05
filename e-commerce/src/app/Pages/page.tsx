@@ -49,7 +49,7 @@ export default function Pages () {
                     </div>
 
                     <button className="bg-pink-500 text-white px-6 py-2 mt-20 rounded-md hover:bg-pink-600">
-                        Continue Shipping
+                        <Link href="/">Continue Shipping</Link>
                     </button>
                 </div>
 
