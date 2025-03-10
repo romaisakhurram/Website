@@ -11,7 +11,7 @@ export default function LatestUpdate () {
                         <span className="block mt-2">Our News Letter</span>
                     </h1>
                     <button className="w-32 sm:w-36 md:w-40 h-10 font-[Josefin Sans] bg-pink-600 hover:bg-pink-700 transition-colors text-white p-2 mt-4 sm:mt-5">
-                        <Link href="/ShopGrid/page">Shop Now</Link>
+                        <Link href="/ShopGrid ">Shop Now</Link>
                     </button>
                 </div>
             </div>
