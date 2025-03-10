@@ -84,7 +84,7 @@ export default function Product () {
                     {/* Main Product Image */}
                     <div className="order-1 md:order-2 flex-shrink-0">
                         <Image
-                        src="/images/product4.png"
+                        src="/images/Product4.png"
                         alt="bag image"
                         width={350}
                         height={250}
