@@ -2,7 +2,6 @@ import Image from "next/image"
 import { FaSearchPlus } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
-import { FaRegCircle } from "react-icons/fa";
 import { HiOutlineMagnifyingGlass} from "react-icons/hi2";
 
 export default function ShopLeftSide () {
