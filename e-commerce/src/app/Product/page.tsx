@@ -52,7 +52,7 @@ export default function Product () {
                     <div className="flex md:flex-col gap-2 order-2 md:order-1">
                         <div className="w-20 sm:w-24 lg:w-32">
                            <Image
-                           src="/images/product1.png"
+                           src="/images/Product1.png"
                            alt="bag image"
                            width={120}
                            height={80}
@@ -62,7 +62,7 @@ export default function Product () {
 
                         <div className="w-20 sm:w-24 lg:w-32">
                            <Image
-                           src="/images/product2.png"
+                           src="/images/Product2.png"
                            alt="bag image"
                            width={140}
                            height={80}
@@ -72,7 +72,7 @@ export default function Product () {
 
                         <div className="w-20 sm:w-24 lg:w-32">
                            <Image
-                           src="/images/product3.png"
+                           src="/images/Product3.png"
                            alt="bag image"
                            width={140}
                            height={80}
