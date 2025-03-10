@@ -29,27 +29,27 @@ export default function Offer () {
     ]
 
     return (
-        <div className="w-full h-[800] mt-5 p-5">
-          <h1 className="text-[40px] font-[JosefinSans] font-bold text-[#1A0B5B] text-center">What Shopex Offer!</h1>
-          <div className="flex justify-center gap-10">
+        <div className="w-full mt-8 sm:mt-10 px-4 sm:px-5 pb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-[40px] font-[JosefinSans] font-bold text-[#1A0B5B] text-center mb-6 sm:mb-8">What Shopex Offer!</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
            {data.map ((Idata,index) => (
-            <div key={index} className=" mt-10 bg-white w-[250px] h-[250px] shadow-xl rounded-md">
-                <div className="flex rounded-xl">
-                  <Image src={Idata.Image} 
-                  alt={Idata.title} 
-                  width={100} 
-                  height={100}
-                  className="w-20 h-20 p-2 mt-2 ml-[30%]"
-                   ></Image>
+            <div key={index} className="bg-white p-4 sm:p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+                <div className="flex justify-center">
+                  <Image 
+                    src={Idata.Image} 
+                    alt={Idata.title} 
+                    width={100} 
+                    height={100}
+                    className="w-16 sm:w-20 h-16 sm:h-20 object-contain"
+                  />
                 </div>
-                <div className="p-3 text-center">
-                  <h2 className="text-[#1A0B5B] text-[22px] font-semibold font-serif">{Idata.title}</h2>
-                  <p className="text-gray-300 text-md">{Idata.desc}</p>
+                <div className="mt-4 text-center">
+                  <h2 className="text-[#1A0B5B] text-lg sm:text-[22px] font-semibold font-serif mb-2">{Idata.title}</h2>
+                  <p className="text-gray-500 text-sm sm:text-base leading-relaxed">{Idata.desc}</p>
                 </div>
             </div>
             ))}
-            </div>
-  
+          </div>
         </div>
     )
 }

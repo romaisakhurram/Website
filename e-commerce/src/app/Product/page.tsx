@@ -34,121 +34,163 @@ export default function Product () {
         ]
 
     return(
-    <header>
-        <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-          <h1 className="text-[30px] font-serif font-bold">Product Details</h1>
-            <ul className="flex gap-2">
+    <header className="min-h-screen bg-gray-50">
+        <div className="w-full bg-[#F2F0FF] px-4 sm:px-6 lg:px-20 py-8 sm:py-10">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">Product Details</h1>
+            <ul className="flex gap-2 text-sm sm:text-base mt-2">
               <li>Home_</li>
               <li>Pages_</li>
               <li className="text-pink-600">Product Details</li>
             </ul>
         </div>
-        <div className="w-full h-[800]">
-            <div className="flex justify-center items-center border border-white shadow-lg w-[60%] h-[300px] p-3 mt-10 ml-[20%] gap-5">
-                <div>
-                    <div>
-                       <Image
-                       src="/images/product1.png"
-                       alt="bag image"
-                       width={120}
-                       height={80}
-                       className="mb-2 mt-2"
-                       ></Image>
-                    </div>
 
-                    <div>
-                       <Image
-                       src="/images/product2.png"
-                       alt="bag image"
-                       width={140}
-                       height={80}
-                       className="mb-2"
-                       ></Image>
-                    </div>
-
-                    <div>
-                       <Image
-                       src="/images/product3.png"
-                       alt="bag image"
-                       width={140}
-                       height={80}
-                       className="mb-2"
-                       ></Image>
-                    </div>
-
-                </div>
-                <div>
-                    <Image
-                    src="/images/product4.png"
-                    alt="bag image"
-                    width={350}
-                    height={250}
-                    ></Image>
-                </div>
-                <div className="pt-10 pb-10">
-                    <h2 className="text-2xl font-serif">Play Wood arm chair</h2>
-                    <p className="text-gray-400 text-md">$32.00 <del className="text-pink-600 text-md">$32.00</del></p>
-                    <p className="font-bold">Color</p>
-                    <p className="text-gray-400 text-md font-semibold mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mouris tellus parttitor purus at volpat sit. </p>
-                    <button className="w-40 h-8 p-1 border border-gray-100 text-sm mb-2 flex justify-center ">Add to cart <CiHeart className="w-8 h-6"/> </button>
-                    <p className="font-bold font-serif mb-2 ">Categories:</p>
-                    <p className="font-bold font-serif mb-2">Tags:</p>
-                    <p className="font-bold font-serif flex gap-2">Share <CiTwitter className="w-8 h-6 text-blue-950"/>  <CiInstagram className="w-8 h-6 text-pink-600"/>  <CiFacebook className="w-8 h-6 text-blue-950"/> </p>
-                </div>
-            </div>
-
-            <div className=" w-full h-[430px] bg-[#F2F0FF] px-20 pt-10 mt-10">
-                <div >
-                    <ul className="flex text-[#151875] ml-10 font-serif text-lg gap-20 ">
-                        <li className="hover:underline hover:underline-offset-1">Description</li>
-                        <li className="hover:underline hover:underline-offset-1">Additional Info</li>
-                        <li className="hover:underline hover:underline-offset-1">Reviews</li>
-                        <li className="hover:underline hover:underline-offset-1">Video</li>
-                    </ul>
-                </div>
-                <div className=" m-10">
-                    <h1 className="text-md text-[#151875] font-serif text-2xl font-semibold mb-2">Varius tempor.</h1>
-                    <p className=" text-gray-400 font-serif text-sm">Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</p>
-                </div>
-                <div className=" m-10">
-                    <h1 className="text-[#151875] font-serif font-semibold text-2xl mb-2">More details</h1>
-                    <p className="flex   text-gray-400 text-sm font-serif"> <FaArrowRight className="w-8 h-6"/> Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</p>
-                    <p className="flex  text-gray-400 text-sm font-serif"> <FaArrowRight className="w-8 h-6"/> Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</p>
-                    <p className="flex  text-gray-400 text-sm font-serif"> <FaArrowRight className="w-8 h-6"/> Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</p>
-                    <p className="flex  text-gray-400 text-sm font-serif"> <FaArrowRight className="w-8 h-6"/> Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</p>
-                </div>
-            </div>
-            
-            <h1 className="text-md text-[#151875] font-serif text-3xl font-semibold  mt-20 ml-20 ">Latest Product</h1>
-            <div className="w-full h-[500] flex justify-center gap-10 mt-5">
-
-                {data.map ((Idata,index) => (
-                    <div key={index} className=" mt-1 w-[500] h-[200] ">
-                        <div className="flex w-[300] h-[300] ">
-                            <Image src={Idata.Image} 
-                              alt={Idata.title} 
-                              width={180} 
-                              height={180}
-                              className="w-60 h-80 "
-                            ></Image>
+        <div className="container mx-auto px-4 py-8">
+            {/* Product Details Card */}
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto">
+                <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
+                    {/* Thumbnail Images */}
+                    <div className="flex md:flex-col gap-2 order-2 md:order-1">
+                        <div className="w-20 sm:w-24 lg:w-32">
+                           <Image
+                           src="/images/product1.png"
+                           alt="bag image"
+                           width={120}
+                           height={80}
+                           className="w-full h-auto rounded-lg hover:opacity-75 transition-opacity cursor-pointer"
+                           />
                         </div>
-                        <div className=" text-md font-serif font-bold">
-                              <h2>{Idata.title}</h2>
-                              <p>{Idata.price}</p>
-                         </div>
+
+                        <div className="w-20 sm:w-24 lg:w-32">
+                           <Image
+                           src="/images/product2.png"
+                           alt="bag image"
+                           width={140}
+                           height={80}
+                           className="w-full h-auto rounded-lg hover:opacity-75 transition-opacity cursor-pointer"
+                           />
+                        </div>
+
+                        <div className="w-20 sm:w-24 lg:w-32">
+                           <Image
+                           src="/images/product3.png"
+                           alt="bag image"
+                           width={140}
+                           height={80}
+                           className="w-full h-auto rounded-lg hover:opacity-75 transition-opacity cursor-pointer"
+                           />
+                        </div>
                     </div>
-                ))}
-            </div>
-            <div>
-                <Image
-                 src="/images/Signatures.png"
-                 alt="Signature"
-                 width={500}
-                 height={500}
-                 className="m-10 ml-[35%]"
-                ></Image>
+
+                    {/* Main Product Image */}
+                    <div className="order-1 md:order-2 flex-shrink-0">
+                        <Image
+                        src="/images/product4.png"
+                        alt="bag image"
+                        width={350}
+                        height={250}
+                        className="w-full max-w-md mx-auto rounded-lg"
+                        />
+                    </div>
+
+                    {/* Product Info */}
+                    <div className="order-3 space-y-4">
+                        <h2 className="text-xl sm:text-2xl font-serif">Play Wood arm chair</h2>
+                        <div className="flex items-center gap-2">
+                            <span className="text-gray-900 text-lg sm:text-xl font-medium">$32.00</span>
+                            <del className="text-pink-600 text-sm sm:text-base">$32.00</del>
+                        </div>
+                        
+                        <div>
+                            <h3 className="font-bold mb-2">Color</h3>
+                            <p className="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mouris tellus parttitor purus at volpat sit.</p>
+                        </div>
+
+                        <button className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-2 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors">
+                            Add to cart
+                            <CiHeart className="w-5 h-5"/>
+                        </button>
+
+                        <div className="space-y-2">
+                            <p className="font-bold font-serif">Categories:</p>
+                            <p className="font-bold font-serif">Tags:</p>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold font-serif">Share</span>
+                                <div className="flex gap-2">
+                                    <CiTwitter className="w-6 h-6 text-blue-950 hover:opacity-75 cursor-pointer"/>
+                                    <CiInstagram className="w-6 h-6 text-pink-600 hover:opacity-75 cursor-pointer"/>
+                                    <CiFacebook className="w-6 h-6 text-blue-950 hover:opacity-75 cursor-pointer"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            {/* Product Description */}
+            <div className="bg-[#F2F0FF] mt-8 sm:mt-12 rounded-lg">
+                <div className="container mx-auto px-4 py-8">
+                    <div className="flex flex-wrap gap-4 sm:gap-8 text-[#151875] font-serif text-sm sm:text-base mb-8">
+                        <button className="hover:underline hover:underline-offset-1">Description</button>
+                        <button className="hover:underline hover:underline-offset-1">Additional Info</button>
+                        <button className="hover:underline hover:underline-offset-1">Reviews</button>
+                        <button className="hover:underline hover:underline-offset-1">Video</button>
+                    </div>
+
+                    <div className="space-y-8">
+                        <div>
+                            <h2 className="text-xl sm:text-2xl text-[#151875] font-serif font-semibold mb-4">Varius tempor.</h2>
+                            <p className="text-gray-600 text-sm sm:text-base">Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet.</p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-xl sm:text-2xl text-[#151875] font-serif font-semibold mb-4">More details</h2>
+                            <div className="space-y-3">
+                                {[1, 2, 3, 4].map((_, index) => (
+                                    <div key={index} className="flex items-start gap-2">
+                                        <FaArrowRight className="w-4 h-4 mt-1 flex-shrink-0 text-pink-600"/>
+                                        <p className="text-gray-600 text-sm sm:text-base">Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis justo netus dis.</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Latest Products */}
+            <div className="py-12">
+                <h2 className="text-2xl sm:text-3xl text-[#151875] font-serif font-semibold mb-8 text-center">Latest Products</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {data.map((item, index) => (
+                        <div key={index} className="group">
+                            <div className="aspect-square overflow-hidden rounded-lg bg-gray-100">
+                                <Image 
+                                    src={item.Image}
+                                    alt={item.title}
+                                    width={180}
+                                    height={180}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h3 className="text-lg font-serif font-bold">{item.title}</h3>
+                                <p className="text-gray-900 font-medium">{item.price}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Signature */}
+            <div className="flex justify-center py-8">
+                <Image
+                    src="/images/Signatures.png"
+                    alt="Signature"
+                    width={300}
+                    height={120}
+                    className="w-48 sm:w-64 lg:w-80 h-auto"
+                />
+            </div>
         </div>
     </header>
     )

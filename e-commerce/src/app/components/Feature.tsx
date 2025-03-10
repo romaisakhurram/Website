@@ -36,45 +36,53 @@ export default function Feature () {
     ]
 
     return (
-        <div className="w-full h-[800] mt-10 p-5">
-          <h1 className="text-[40px] font-[Josefin Sans] font-bold text-[#1A0B5B] text-center">Feature Product</h1>
-          <div className="flex justify-center gap-10">
+        <div className="w-full py-10 md:py-20 px-4 md:px-5">
+          <h1 className="text-2xl md:text-[40px] font-[Josefin Sans] font-bold text-[#1A0B5B] text-center">Feature Product</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 max-w-7xl mx-auto">
            {data.map ((Idata,index) => (
-              <div key={index} className="mt-20 bg-white w-[300] h-[300] relative group overflow-hidden shadow-xl rounded-md">
-                <div className="flex bg-[#F2F0FF] w-[250] h-[400] rounded-t-sm">
-                  <Image src={Idata.Image} 
+              <div key={index} className="mt-8 md:mt-20 bg-white w-full relative group overflow-hidden shadow-xl rounded-md">
+                <div className="bg-[#F2F0FF] w-full aspect-square relative rounded-t-sm">
+                  <Image 
+                    src={Idata.Image} 
                     alt={Idata.title} 
                     width={220} 
                     height={220}
-                    className="w-60 h-60 p-10"
-                  ></Image>
-                  <div className="absolute inset-2 bg-opacity-100 flex flex-col items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="space-x-2 flex">
-                      <FaRegHeart className="w-5 h-6 mb-1 text-[#1A0B5B]"/>
-                      <MdOutlineLocalGroceryStore className="w-8 h-6 mb-1 text-[#1A0B5B]"/> 
-                      <FaSearchPlus className="w-8 h-4 mt-1 text-[#1A0B5B]"/>
-                    </div> 
+                    className="w-full h-full object-contain p-6 md:p-10"
+                  />
+                  {/* Hover Icons */}
+                  <div className="absolute top-4 right-4 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                      <FaRegHeart className="w-5 h-5 text-[#1A0B5B]"/>
+                    </button>
+                    <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                      <MdOutlineLocalGroceryStore className="w-5 h-5 text-[#1A0B5B]"/>
+                    </button>
+                    <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                      <FaSearchPlus className="w-5 h-5 text-[#1A0B5B]"/>
+                    </button>
                   </div>
-                  <div className="absolute inset-20 bg-opacity-100 flex flex-col items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className=" w-32 h-10 px-1 py-1 mt-[90px] bg-green-400 text-white text-sm font-medium hover:bg-green-600 rounded-sm">
+                  {/* View Details Button */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="w-32 h-10 bg-green-400 text-white text-sm font-medium hover:bg-green-600 rounded-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       View details
                     </button>
                   </div>
                 </div>
-                <div className="p-2 text-center hover:bg-blue-600 hover:text-white">
-                  <h2 className="text-pink-600 text-lg font-[Lato]">{Idata.title}</h2>
-                  <p className="text-sm text-[#151875] font-[JosefinSans]">{Idata.Code}</p>
-                  <p className="text-sm text-[#151875] font-[Lato]">{Idata.price}</p>
+                <div className="p-4 text-center hover:bg-blue-600 hover:text-white transition-colors">
+                  <h2 className="text-pink-600 group-hover:text-white text-lg font-[Lato]">{Idata.title}</h2>
+                  <p className="text-sm text-[#151875] group-hover:text-white font-[JosefinSans]">{Idata.Code}</p>
+                  <p className="text-sm text-[#151875] group-hover:text-white font-[Lato]">{Idata.price}</p>
                 </div>
               </div>
             ))}
           </div>
-          <ul className="flex justify-center mt-10 gap-1">
-            <li className="bg-pink-600 w-4 h-1 rounded-md"></li>
-            <li className="bg-pink-400 w-4 h-1 rounded-md"></li>
-            <li className="bg-pink-400 w-4 h-1 rounded-md"></li>
-            <li className="bg-pink-400 w-4 h-1 rounded-md"></li>
-          </ul>
+          {/* Pagination Dots */}
+          <div className="flex justify-center mt-8 md:mt-10 gap-1">
+            <div className="bg-pink-600 w-4 h-1 rounded-md"></div>
+            <div className="bg-pink-400 w-4 h-1 rounded-md"></div>
+            <div className="bg-pink-400 w-4 h-1 rounded-md"></div>
+            <div className="bg-pink-400 w-4 h-1 rounded-md"></div>
+          </div>
         </div>
     )
 }

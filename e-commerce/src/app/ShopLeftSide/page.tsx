@@ -66,235 +66,181 @@ export default function ShopLeftSide () {
     ]
 
     return (
-        <header>
-           <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-               <h1 className="text-[30px] text-[#101750] font-[JosefinSans] font-bold">Shop Left Side</h1>
-                <ul className="flex gap-2">
+        <header className="min-h-screen bg-gray-50">
+           <div className="w-full bg-[#F2F0FF] px-4 sm:px-6 lg:px-20 py-8 sm:py-10">
+               <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#101750] font-[JosefinSans] font-bold">Shop Left Side</h1>
+                <ul className="flex gap-2 text-sm sm:text-base mt-2">
                   <li>Home_</li>
                   <li>Pages_</li>
                   <li className="text-pink-600">Shop Left Side</li>
                 </ul>
             </div>
-           <div className="w-full h-[800] flex justify-evenly flex-wrap mt-15 p-5">
-                {/*headings */}
-                <div className="flex justify-center p-5">
+
+           <div className="container mx-auto px-4 py-8">
+                {/* Header Section */}
+                <div className="space-y-6 sm:space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-center mb-8 sm:mb-12">
                     <div>
-                       <h1 className="text-3xl text-[#151875] font-bold font-serif">Ecommerce Accessories & Fashion Item</h1>
-                        <p className="text-sm text-[#8A8FB9]">About 9,620 results(0.62 seconds)</p>
+                       <h1 className="text-2xl sm:text-3xl text-[#151875] font-bold font-serif mb-2">Ecommerce Accessories & Fashion Item</h1>
+                        <p className="text-sm text-[#8A8FB9]">About 9,620 results (0.62 seconds)</p>
                     </div>
 
-                    <div className="flex justify-center text-[#3F509E] gap-5">
-                       <label htmlFor="number">Per Page:</label>
-                       <input type="number" name="number" 
-                       className="w-[5%] h-8 border border-gray-400" />
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="perPage" className="whitespace-nowrap">Per Page:</label>
+                           <input 
+                               type="number" 
+                               id="perPage"
+                               className="w-20 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
 
-                       <label htmlFor="text">Sort By:</label>
-                       <input type="text" name="text" placeholder="Best Watch"
-                       className=" w-[12%] h-8 border border-gray-400  text-sm" />
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="sortBy" className="whitespace-nowrap">Sort By:</label>
+                           <input 
+                               type="text" 
+                               id="sortBy"
+                               placeholder="Best Watch"
+                               className="w-32 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
 
-                       <label htmlFor="number">Views:</label>
-                       <input type="number" name="number" 
-                        className="w-[20%] h-8 border border-gray-400" />
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="views" className="whitespace-nowrap">Views:</label>
+                           <input 
+                               type="number" 
+                               id="views"
+                               className="w-20 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
                     </div>
                 </div>
-                {/* Left Side */}
-                <div className="mt-20">
-                   <div className="mb-10">
-                       <h2 className="font-bold text-lg text-[#151875] text-[JosefinSans] underline underline-offset-1">Product Brand</h2>
-                       <input type="checkbox" name="subscribe" className=""/>
-                       <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Coaster Furniture
-                        </label>
-                        <br/>
 
-                        <input type="checkbox" name="subscribe" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Fusion Dot High Fashion
-                        </label>
-                        <br />
+                <div className="flex flex-col lg:flex-row gap-8">
+                    {/* Left Sidebar */}
+                    <div className="w-full lg:w-64 space-y-8">
+                        {/* Product Brand */}
+                        <div className="space-y-3">
+                            <h2 className="font-bold text-lg text-[#151875] font-[JosefinSans] border-b pb-2">Product Brand</h2>
+                            {['Coaster Furniture', 'Fusion Dot High Fashion', 'Unique Furnitture Restor', 'Dream Furnitture Flipping', 'Young Repurposed', 'Green DIY furniture'].map((brand) => (
+                                <div key={brand} className="flex items-center gap-2">
+                                    <input type="checkbox" className="rounded text-pink-500 focus:ring-pink-500"/>
+                                    <label className="text-sm text-[#7E81A2] font-[Lato]">{brand}</label>
+                                </div>
+                            ))}
+                        </div>
 
-                        <input type="checkbox" name="subscribe" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Unique Furnitture Restor
-                        </label>
-                        <br />
+                        {/* Discount Offer */}
+                        <div className="space-y-3">
+                            <h2 className="font-bold text-lg text-[#151875] font-[JosefinSans] border-b pb-2">Discount Offer</h2>
+                            {['20% Cashback', '5% Cashback Offer', '25% Discount Offer'].map((offer) => (
+                                <div key={offer} className="flex items-center gap-2">
+                                    <input type="checkbox" className="rounded text-pink-500 focus:ring-pink-500"/>
+                                    <label className="text-sm text-[#7E81A2] font-[Lato]">{offer}</label>
+                                </div>
+                            ))}
+                        </div>
 
-                        <input type="checkbox" name="subscribe" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                          Dream Furnitture Flipping
-                        </label>
-                        <br />
+                        {/* Categories */}
+                        <div className="space-y-3">
+                            <h2 className="font-bold text-lg text-[#151875] font-[JosefinSans] border-b pb-2">Categories</h2>
+                            {['Prestashop', 'Magento', 'Bigcommerce', 'OsCommerce', '3dcart', 'Bags', 'Accessories', 'Jewellery', 'Watches'].map((category) => (
+                                <div key={category} className="flex items-center gap-2">
+                                    <input type="checkbox" className="rounded text-pink-500 focus:ring-pink-500"/>
+                                    <label className="text-sm text-[#7E81A2] font-[Lato]">{category}</label>
+                                </div>
+                            ))}
+                        </div>
 
-                        <input type="checkbox" name="subscribe" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Young Repurposed
-                        </label>
-                        <br />
+                        {/* Price Filter */}
+                        <div className="space-y-3">
+                            <h2 className="font-bold text-lg text-[#151875] font-[JosefinSans] border-b pb-2">Price Filter</h2>
+                            {['$0.00 - $150.00', '$150.00 - $350.00', '$150.00 - $504.00', '$450.000 +'].map((range) => (
+                                <div key={range} className="flex items-center gap-2">
+                                    <input type="checkbox" className="rounded text-pink-500 focus:ring-pink-500"/>
+                                    <label className="text-sm text-[#7E81A2] font-[Lato]">{range}</label>
+                                </div>
+                            ))}
+                            <div className="relative mt-4">
+                                <input 
+                                    type="search" 
+                                    placeholder="$10.0 - $20.0" 
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md pr-10 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                />
+                                <HiOutlineMagnifyingGlass className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"/>
+                            </div>
+                        </div>
 
-                        <input type="checkbox" name="subscribe" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Green DIY furniture
-                        </label>                
-                    </div>
-                    <div className="mb-10">
-                        <h2 className="font-bold text-lg text-[#151875] text-[JosefinSans] underline underline-offset-1">Discount Offer</h2>
-                        <input type="checkbox" name="subscribe" className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                          20% Cashback
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe" className="accent-pink-500" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           5% Cashback Offer
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe" className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                          25% Discount Offer
-                        </label>
-                    </div>
-                    <div className="mb-10">
-                        <h2 className="font-bold text-lg text-[#151875] text-[JosefinSans] underline underline-offset-1">Categories</h2>
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Prestashop
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Magento
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Bigcommerce
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           OsCommerce
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                        3dcart
-                       </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Bags
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Accessories
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Jewellery
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500"/>
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           Watches
-                        </label>
+                        {/* Color Filter */}
+                        <div className="space-y-3">
+                            <h2 className="font-bold text-lg text-[#151875] font-[JosefinSans] border-b pb-2">Filter By Color</h2>
+                            <div className="grid grid-cols-2 gap-3">
+                                {[
+                                    { color: '#5E37FF', name: 'Blue' },
+                                    { color: '#33D221', name: 'Green' },
+                                    { color: '#FF9437', name: 'Orange' },
+                                    { color: '#E248FF', name: 'Purple' },
+                                    { color: '#FFBF95', name: 'Brown' },
+                                    { color: '#26CBFF', name: 'Sky' }
+                                ].map((item) => (
+                                    <div key={item.name} className="flex items-center gap-2">
+                                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: item.color }}></div>
+                                        <span className="text-sm text-gray-600">{item.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="mb-10">
-                       <h2 className="font-bold text-lg text-[#151875] text-[JosefinSans] underline underline-offset-1">Price Filter</h2>
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                          $0.00 - $150.00
-                        </label>
-                        <br />
+                    {/* Product Grid */}
+                    <div className="flex-1">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {data.map((item, index) => (
+                                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden group">
+                                    <div className="relative aspect-[4/3] bg-gray-100">
+                                        <Image 
+                                            src={item.Image}
+                                            alt={item.title}
+                                            width={400}
+                                            height={300}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                        {/* Quick Action Buttons */}
+                                        <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                            <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                                                <FaSearchPlus className="w-5 h-5 text-gray-700"/>
+                                            </button>
+                                            <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                                                <CiHeart className="w-5 h-5 text-gray-700"/>
+                                            </button>
+                                            <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                                                <MdOutlineLocalGroceryStore className="w-5 h-5 text-gray-700"/>
+                                            </button>
+                                        </div>
+                                    </div>
 
-                        <input type="checkbox" name="subscribe" className="accent-pink-500" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           $150.00 - $350.00
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                        $150.00 - $504.00
-                        </label>
-                        <br />
-
-                        <input type="checkbox" name="subscribe"  className="accent-pink-500" />
-                        <label htmlFor="subscribe" className="text-sm text-[#7E81A2] text-[Lato]">
-                           $450.000 +
-                        </label>
-                        <br />
-                        
-                        <button className="flex justify-center mt-2 w-40 h-8 p-2 rounded-md border border-gray-400 text-gray-300 outline outline-none">
-                          <input type="search" name="subscribe" placeholder="$10.0+$20" className="w-full rounded text-sm  text-gray-300 outline outline-none" />
-                          <HiOutlineMagnifyingGlass className="w-4 h-4 ml-12 text-gray-400" />
-                        </button>
-                    </div>
-
-                    <div className="mb-10">
-                       <h2 className="font-bold text-lg text-[#151875] text-[JosefinSans] underline underline-offset-1">Filter By Color</h2>
-                       <div className="flex text-sm gap-1 mt-2">
-                            <ul>
-                              <li className="mb-2 flex gap-1"> <FaRegCircle className="w-4 h-4  rounded-full bg-[#5E37FF]  text-[#5E37FF]"/>Blue</li>
-                              <li className="mb-2 flex gap-1"> <FaRegCircle className="w-4 h-4  rounded-full bg-[#33D221]  text-[#33D221] "/>Green</li>
-                            </ul>
-                            <ul>
-                                <li className="mb-2 flex gap-1"> <FaRegCircle className="w-4 h-4  rounded-full bg-[#FF9437]  text-[#FF9437] "/>Orange</li>
-                                <li className="mb-2 flex gap-1"> <FaRegCircle className="w-4 h-4  rounded-full bg-[#E248FF]  text-[#E248FF] "/>Purple</li>
-                            </ul>
-                            <ul>
-                                <li className="mb-2 flex gap-1"> <FaRegCircle className="w-4 h-4  rounded-full bg-[#FFBF95] text-[#FFBF95] "/>Brown</li>
-                                <li className="mb-2 flex gap-1"> <FaRegCircle className="w-4 h-4  rounded-full bg-[#26CBFF] text-[#26CBFF]"/>Sky</li>
-                            </ul>
+                                    <div className="p-4">
+                                        <h2 className="text-lg font-bold text-[#111C85] font-[JosefinSans] mb-2">{item.title}</h2>
+                                        <div className="flex items-center gap-2 mb-3">
+                                            <span className="text-[#111C85]">{item.price}</span>
+                                            <del className="text-[#FF2AAA] text-sm">{item.delPrice}</del>
+                                        </div>
+                                        <p className="text-[#9295AA] text-sm">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
-                
-                {/* Right Side */}
-                <aside>
-                  {data.map ((Idata,index) => (
-                     <div key={index} className=" mt-10 w-[150] h-[150] p-2 flex justify-center gap-5 shadow-lg ">
-                        <div className="w-[80] h-[150]">
-                            <Image src={Idata.Image} 
-                            alt={Idata.title} 
-                            width={80} 
-                            height={80}
-                            className="w-60 h-40 "
-                            ></Image>
-                        </div>
-                        <div className="font-bold  p-2">
-                           <h2 className="text-[#111C85] font-[JosefinSans] text-lg">{Idata.title}</h2>
-                           <p className="text-[#111C85] text-md">{Idata.price} <del className="text-[#FF2AAA]">{Idata.delPrice}</del></p>
-                           <p className="text-[#9295AA] font[Lato] text-sm">{Idata.desc}</p>
-                            <ul className="flex ">
-                                <li><FaSearchPlus className="w-6 h-5"/></li>
-                                <li><CiHeart className="w-8 h-6 "/></li>
-                                <li><MdOutlineLocalGroceryStore className="w-8 h-6"/></li>
-                            </ul>
-                        </div>
-                    </div>
-                    ))}
-                </aside>
-                <div>
+
+                {/* Signature */}
+                <div className="flex justify-center py-12">
                     <Image
-                       src="/images/Signatures.png"
-                       alt="Signature"
-                       width={500}
-                       height={500}
-                       className=" ml-[10%] mt-10"
-                    ></Image>
+                        src="/images/Signatures.png"
+                        alt="Signature"
+                        width={300}
+                        height={120}
+                        className="w-48 sm:w-64 lg:w-80 h-auto"
+                    />
                 </div>
             </div>    
         </header>  

@@ -29,27 +29,43 @@ export default function Feature () {
     ]
 
     return (
-        <div className="w-full h-[800] mt-10 p-5">
-          <h1 className="text-[40px] font-[Josefin Sans] font-bold text-[#1A0B5B] text-center">Top Categories</h1>
-          <div className="flex justify-center gap-10">
-           {data.map ((Idata,index) => (
-            <div key={index} className="mt-20 bg-white w-[500] h-[200]">
-                <div className="flex bg-[#F2F0FF] w-[250px] h-[250px] rounded-full  hover:border-s-4 hover:border-[#1A0B5B] hover:border-spacing-1.5">
-                  <Image src={Idata.Image} 
-                  alt={Idata.title} 
-                  width={100} 
-                  height={80}
-                  className="w-40 h-40 m-12"
-                   ></Image>
-                </div>
-                <div className="p-2 font-[Josefin Sans] text-center">
-                  <h2 className="text-[#1A0B5B] text-xl">{Idata.title}</h2>
-                  <p className="text-[#1A0B5B] text-md">{Idata.price}</p>
+        <div className="w-full py-10 md:py-16 px-4 md:px-8">
+            <div className="max-w-7xl mx-auto">
+                <h1 className="text-2xl md:text-[40px] font-[Josefin Sans] font-bold text-[#1A0B5B] text-center mb-8 md:mb-12">
+                    Top Categories
+                </h1>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    {data.map((Idata, index) => (
+                        <div key={index} className="flex flex-col items-center">
+                            {/* Circular Image Container */}
+                            <div className="relative w-full max-w-[250px] aspect-square">
+                                <div className="absolute inset-0 bg-[#F2F0FF] rounded-full transition-all duration-300 hover:border-s-4 hover:border-[#1A0B5B] group">
+                                    <div className="relative w-full h-full flex items-center justify-center p-8">
+                                        <Image 
+                                            src={Idata.Image} 
+                                            alt={Idata.title} 
+                                            width={100} 
+                                            height={80}
+                                            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Product Info */}
+                            <div className="mt-4 text-center">
+                                <h2 className="text-[#1A0B5B] text-lg md:text-xl font-[Josefin Sans] mb-1">
+                                    {Idata.title}
+                                </h2>
+                                <p className="text-[#1A0B5B] text-base md:text-md font-[Josefin Sans]">
+                                    {Idata.price}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-            ))}
-            </div>
-  
         </div>
     )
 }

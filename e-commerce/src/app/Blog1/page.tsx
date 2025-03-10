@@ -10,302 +10,277 @@ export default function Blog1 () {
     
   return (
     <header>
-        <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-          <h1 className="text-[30px] font-serif font-bold">Single Blog</h1>
-            <ul className="flex gap-2">
-              <li>Home_</li>
-              <li>Pages_</li>
-              <li className="text-pink-600">Single Blog</li>
-            </ul>
+        <div className="w-full bg-[#F2F0FF] px-4 sm:px-6 lg:px-20 py-8 sm:py-10">
+          <h1 className="text-2xl sm:text-3xl font-serif font-bold">Single Blog</h1>
+          <ul className="flex gap-2 text-sm sm:text-base mt-2">
+            <li>Home_</li>
+            <li>Pages_</li>
+            <li className="text-pink-600">Single Blog</li>
+          </ul>
         </div>
-      <div className="container mx-auto px-4 lg:px-20 py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 gap-8">
+      <div className="container mx-auto px-4 lg:px-20 py-8 sm:py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Main Content */}
-          <div className="lg:col-span-2">
-              <div className="mb-10 bg-white">
-                <Image
-                  src="/images/blog1.png"
-                  alt="blog image"
-                  width={800}
-                  height={300}
-                  className="w-[60]% h-70  object-cover mb-5 "
-                ></Image>
-                <div>
-                  <h2 className="text-xl font-semibold mb-3">Mauris at orci non vulputate diam tincidunt nec.</h2>
-                  <p className="text-gray-400 mb-5">Praesent nonummy mi in odio. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.</p>
+          <div className="lg:col-span-2 space-y-6">
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="aspect-w-16 aspect-h-9">
+                  <Image
+                    src="/images/blog1.png"
+                    alt="blog image"
+                    width={800}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
+                <div className="p-4 sm:p-6">
+                  <h2 className="text-xl sm:text-2xl font-semibold mb-3 text-[#1A0B5B]">Mauris at orci non vulputate diam tincidunt nec.</h2>
+                  <p className="text-gray-600 text-sm sm:text-base mb-4">Praesent nonummy mi in odio. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.</p>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.</p>
+                </div>
               </div>
-              <div className="bg-[#FAFAFB] p-2 mb-10 ">
-                <p className="text-gray-400 font-sans">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.
+
+              <div className="bg-[#FAFAFB] p-4 sm:p-6 rounded-lg">
+                <p className="text-gray-600 text-sm sm:text-base italic">
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat
-                  toamk risusu.
+                  toamk risusu."
                 </p>
               </div>
               
-                <div>
-                  <div className="flex gap-5"> 
-                    <div>
-                     <Image
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="aspect-w-4 aspect-h-3">
+                    <Image
                       src="/images/Group1.png"
                       alt="blog image"
-                      width={200}
-                      height={200}
-                      className="w-full h-60 mb-2"
-                      ></Image>
-                    </div>
-                    <div>
-                     <Image
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="aspect-w-4 aspect-h-3">
+                    <Image
                       src="/images/Group2.png"
                       alt="blog image"
-                      width={200}
-                      height={200}
-                      className="w-full h-60 mb-2"
-                      ></Image>
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra.
+                </p>
+              </div>
+
+              {/* Related Products */}
+              <div className="py-8">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-[#1A0B5B]">Related Products</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {[
+                    {title: "Quam sed", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle10.png" },
+                    {title: "Tristique sed", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle9.png" },
+                    {title: "A etiam", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle5.png" },
+                    {title: "Mi nisi", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle11.png" },
+                  ].map((item, index) => (
+                    <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                      <div className="aspect-w-1 aspect-h-1">
+                        <Image
+                          src={item.Image}
+                          alt={item.title}
+                          width={200}
+                          height={200}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-4 text-center">
+                        <h4 className="text-[#1A0B5B] font-semibold mb-2">{item.title}</h4>
+                        <p className="text-gray-600">
+                          <span>{item.price}</span>
+                          <span className="text-pink-600 ml-2 line-through">{item.delPrice}</span>
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Social Share */}
+              <div className="flex justify-center space-x-4">
+                <button className="p-2 text-blue-600 hover:text-blue-700 transition-colors">
+                  <FaFacebook className="w-6 h-6" />
+                </button>
+                <button className="p-2 text-pink-600 hover:text-pink-700 transition-colors">
+                  <SiInstagram className="w-6 h-6" />
+                </button>
+                <button className="p-2 text-blue-400 hover:text-blue-500 transition-colors">
+                  <AiFillTwitterCircle className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Related Posts */}
+              <div className="space-y-4">
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-4 p-4">
+                    <div className="w-24 h-24 flex-shrink-0">
+                      <Image
+                        src="/images/Rectangle8.png"
+                        alt="Related post"
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover rounded"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[#1A0B5B] font-semibold mb-2">Sapien ac</h4>
+                      <p className="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At in vitae rutrum vulputate consectetur.</p>
                     </div>
                   </div>
-                    <div className="mt-5">
-                      <p className="text-gray-400 text-sm font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, </p>
-                    </div>
                 </div>
 
-              
-              <ul className="w-full h-[500] flex justify-center gap-5 mt-5">
-                {[
-                 {title: "Quam sed", price:"$32.00" , delPrice:"$56.00",  Image: "/images/Rectangle10.png" },
-                 {title: "Tristique sed", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle9.png" },
-                 {title: "A etiam", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle5.png" },
-                 {title: "Mi nisi", price:"$32.00" , delPrice:"$56.00", Image: "/images/Rectangle11.png" },
-                ].map((Idata , index) => (
-                <li key={index} >
-                  <div className="mt-1 w-[300] h-[200] ">
-                    <div className="flex w-[200] h-[200]">
-                     <Image
-                      src={Idata.Image}
-                      alt={Idata.title}
-                      width={100}
-                      height={100}
-                      className="mb-2 w-80 h-60"
-                      ></Image>
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-4 p-4">
+                    <div className="w-24 h-24 flex-shrink-0">
+                      <Image
+                        src="/images/Rectangle9.png"
+                        alt="Related post"
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover rounded"
+                      />
                     </div>
-                    <div className="mt-1 mb-5 text-center">
-                      <h1 className="text-md font-bold font-serif">{Idata.title}</h1>
-                      <p className="text-gray-400 text-sm font-medium">{Idata.price} <del className="text-pink-600 text-sm font-medium">{Idata.delPrice}</del></p>
+                    <div>
+                      <h4 className="text-[#1A0B5B] font-semibold mb-2">Sapien ac</h4>
+                      <p className="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At in vitae rutrum vulputate consectetur.</p>
                     </div>
+                  </div>
                 </div>
-              </li>
-              ))}
-            </ul>
-            <p className="text-gray-400 text-sm mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc,</p> 
-            <p className="text-gray-400 text-sm mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc,</p> 
-          <div>
-            <ul className="flex justify-center mt-5 gap-5">
-              <li className="text-blue-800 "><FaFacebook/></li>
-              <li className="bg-pink-600 text-white"><SiInstagram/></li>
-              <li className="bg-white text-blue-300"><AiFillTwitterCircle/></li>
-            </ul>
-          </div>
-          
-          <div className="w-[90%] h-50 mt-10 flex justify-center border border-gray-400 shadow-lg gap-5"> 
-            <div>
-              <Image
-              src="/images/Rectangle8.png"
-              alt="blog image"
-              width={80}
-              height={80}
-              className="w-full h-20 m-2"
-              ></Image>
-            </div>
-            <div className="mt-5 ">
-              <h1 className="text-md font-bold font-serif">Sapien ac</h1>
-              <p className="text-gray-400 text-sm font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At in vitae rutrum vulputate consectetur.</p>
-            </div>
-          </div>
-          <div className="w-[90%] h-50 mt-10 flex justify-center border border-gray-400 shadow-lg gap-5"> 
-            <div>
-              <Image
-              src="/images/Rectangle9.png"
-              alt="blog image"
-              width={120}
-              height={80}
-              className="w-full h-20 m-2"
-              ></Image>
-            </div>
-            <div className="mt-5">
-              <h1 className="text-md font-bold font-serif">Sapien ac</h1>
-              <p className="text-gray-400 text-sm font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At in vitae rutrum vulputate consectetur.</p>
-            </div>
-          </div>
+              </div>
 
-          <div className="container mx-auto px-2 mt-8 bg-white p-4 ">
-             <form>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <button className="flex border border-gray-300">
-                    <MdOutlineAccountBox className="mt-3 ml-1"/><input
-                    type="text"
-                    placeholder="Your Name"
-                    className="p-2 w-full"
-                    />
+              {/* Comment Form */}
+              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
+                <h3 className="text-xl font-semibold mb-6 text-[#1A0B5B]">Leave a Comment</h3>
+                <form className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <MdOutlineAccountBox className="text-gray-400" />
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Your Name"
+                        className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <MdOutlineMailOutline className="text-gray-400" />
+                      </div>
+                      <input
+                        type="email"
+                        placeholder="Your Email"
+                        className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      />
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <div className="absolute top-3 left-3 text-gray-400">
+                      <BiCommentDetail />
+                    </div>
+                    <textarea
+                      placeholder="Write your comment"
+                      rows={4}
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                    ></textarea>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" id="subscribe" className="rounded text-pink-600 focus:ring-pink-500" />
+                    <label htmlFor="subscribe" className="text-sm text-gray-600">
+                      Save my name, email, and website in this browser for the next time I comment.
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full sm:w-auto px-6 py-3 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors"
+                  >
+                    Send Message
                   </button>
+                </form>
+              </div>
+          </div>
 
-                  <button className="flex border border-gray-300">
-                   <MdOutlineMailOutline className="mt-3 ml-1"/><input
-                    type="email"
-                    placeholder="Write Your Email"
-                    className=" p-2 w-full"
-                    />
-                  </button>
-                </div>
-                <button className="flex mt-5 w-full border border-gray-300">
-                  <BiCommentDetail className="mt-5 ml-1"/>
-                  <textarea
-                    placeholder="Write your comment"
-                    className=" p-2 w-full mt-4"
-                  ></textarea>
-                </button>
-                
-                <div className="flex items-center mt-2 space-x-2 mb-6">
-                  <input type="checkbox" id="subscribe" />
-                  <label htmlFor="subscribe" className="text-sm">
-                    Save my name, email, and website in this browser for the next time I comment.
-                  </label>
-                </div>
-
-                <button className="w-full bg-pink-600 text-white py-2 px-4 mt-4">
-                  Continue to shopping
-                </button>
-              </form>
-            </div>
-        </div>
-  
           {/* Sidebar */}
-           <aside>
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3">Search  </h3>
-              <button className="flex w-60 border border-gray-300">  
-                <input 
+          <aside className="space-y-6">
+            {/* Search */}
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="relative">
+                <input
                   type="text"
                   placeholder="Search..."
-                  className="w-full rounded p-2" 
-                /><HiOutlineMagnifyingGlass className="w-20 h-30 ml-20 mt-3"/>
-              </button>
-            </div>
-  
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3">Categories</h3>
-              <ul className="text-gray-600 space-y-2">
-                {["Women(21)", "Women(10)", "Women(9)", "Women(5)"].map(
-                  (category, index) => (
-                    <li key={index}>
-                     <span
-                        className="text-blue-950 px-2 py-1 text-lg rounded cursor-pointer hover:text-pink-600">
-                        {category}
-                      </span>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold font-serif mb-3">Recent Post</h3>
-              <ul className=" space-y-2">
-                {[
-                  {title:"It is long established fact" , Date:"Aug 09 2020" , Image:"/images/blog10.png"},
-                  {title:"It is long established fact", Date:"Aug 09 2020" , Image:"/images/blog4.png"},
-                  {title:"It is long established fact", Date:"Aug 09 2020" , Image:"/images/blog5.png"},
-                  {title:"It is long established fact", Date:"Aug 09 2020" , Image:"/images/blog6.png"},
-                ].map((post, index) => (
-                  <li key={index} className="flex gap-5">
-                   <Image
-                   src={post.Image}
-                   alt={post.title}
-                   width={100}
-                   height={100}
-                   ></Image>
-                  <div className="mt-2 font-serif">
-                    <p className="text-blue-950">{post.title}</p>
-                    <p className="text-gray-400">{post.Date}</p>
-                  </div>
-                </li>
-                ))}
-              </ul>
+                  className="w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
+                  <HiOutlineMagnifyingGlass className="text-gray-400" />
+                </div>
+              </div>
             </div>
 
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold font-serif mb-3">Sale Product</h3>
+            {/* Categories */}
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-4 text-[#1A0B5B]">Categories</h3>
               <ul className="space-y-2">
-                {[
-                  {title:"Elit ornare in enim mauris." , Date:"Aug 09 2020" , Image:"/images/blog7.png"},
-                  {title:"Viverra pulvinar et enim.", Date:"Aug 09 2020" , Image:"/images/blog8.png"},
-                  {title:"Mattis varius donec fdsfd", Date:"Aug 09 2020" , Image:"/images/blog9.png"},
-                ].map((post, index) => (
-                  <li key={index} className="flex gap-5">
-                   <Image
-                   src={post.Image}
-                   alt={post.title}
-                   width={100}
-                   height={100}
-                   ></Image>
-                   <div className="mt-2 font-serif">
-                      <p className="text-blue-950">{post.title}</p>
-                      <p className="text-gray-400">{post.Date}</p>
-                    </div>
+                {["Women", "Men", "Accessories", "Kids"].map((category, index) => (
+                  <li key={index}>
+                    <button className="w-full text-left px-2 py-1.5 text-gray-600 hover:text-pink-600 transition-colors">
+                      {category}
+                    </button>
                   </li>
                 ))}
               </ul>
             </div>
-  
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold font-serif mb-3">Offer Product</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  {title:"Duis lectus est.", price:"$12.00 - $15.00" , Image:"/images/blog13.png"}, 
-                  {title:"Sed placerat." , price:"$12.00 - $15.00" , Image:"/images/product1.png"},
-                  {title:"Netus Proin", price:"$12.00 - $15.00"  , Image:"/images/blog11.png"},
-                  {title:"Platea in.", price:"$12.00 - $15.00" , Image:"/images/blog12.png"},
-                ].map((src, index) => (
-                   <div key={index}>
+
+            {/* Recent Posts */}
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-4 text-[#1A0B5B]">Recent Posts</h3>
+              <div className="space-y-4">
+                {[1, 2, 3].map((_, index) => (
+                  <div key={index} className="flex gap-3">
+                    <div className="flex-shrink-0">
                       <Image
-                      src={src.Image}
-                      alt="Product"
-                      width={80}
-                      height={80}
-                      className="w-40 h-20 object-cover rounded"
-                      ></Image>
-                      <p className="text-md text-blue-950 font-serif">{src.title}</p>
-                      <p className="text-gray-400 text-sm font-serif">{src.price}</p>
+                        src={`/images/blog${index + 1}.png`}
+                        alt="Recent post"
+                        width={80}
+                        height={80}
+                        className="w-20 h-20 object-cover rounded"
+                      />
                     </div>
-                  ))}
+                    <div>
+                      <h4 className="text-sm font-medium text-[#1A0B5B] line-clamp-2">
+                        It is a long established fact
+                      </h4>
+                      <p className="text-sm text-gray-500 mt-1">Aug 09 2020</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-  
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {["General", "Insas", "Atsanil", "Bibsaas", "Nulla"].map((tag,index) => (
-                  <span
-                    key={index}
-                    className="text-blue-950 px-2 py-1 text-lg underline underline-offset-1 rounded cursor-pointer hover:text-pink-600"
-                  >
-                    {tag}
-                  </span>
-                ))}
+
+            {/* Sale Banner */}
+            <div className="bg-[#F2F0FF] p-4 rounded-lg text-center">
+              <h3 className="text-xl font-bold text-[#1A0B5B] mb-4">Sale Product</h3>
+              <div className="aspect-w-1 aspect-h-1">
+                <Image
+                  src="/images/blog2.png"
+                  alt="Sale Product"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
             </div>
           </aside>
         </div>
-        <div>
-          <Image
-          src="/images/Signatures.png"
-          alt="Signature"
-          width={500}
-          height={500}
-          className="m-8 ml-[30%]"
-          ></Image>
-        </div>
       </div>
-    </header>  
+    </header>
   );
 }
-  

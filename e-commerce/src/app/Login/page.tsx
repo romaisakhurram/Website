@@ -1,49 +1,78 @@
 import Link from "next/link"
 import Image from "next/image"
-export default function Login () {
-    return(
-        <div className="w-full h-[800]">
-            <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-               <h1 className="text-[30px] font-serif font-bold">My Account</h1>
-               <ul className="flex gap-2">
-                   <li>Home_</li>
-                   <li>Pages_</li>
-                   <li className="text-pink-600">MyAccount</li>
-               </ul>
+
+export default function Login() {
+    return (
+        <div className="min-h-screen bg-gray-50">
+            <div className="w-full bg-[#F2F0FF] px-4 sm:px-6 lg:px-20 py-8 sm:py-10">
+                <h1 className="text-2xl sm:text-3xl font-serif font-bold">My Account</h1>
+                <ul className="flex gap-2 text-sm sm:text-base mt-2">
+                    <li>Home_</li>
+                    <li>Pages_</li>
+                    <li className="text-pink-600">MyAccount</li>
+                </ul>
             </div>
-            <div className="w-[28%] h-[350px] shadow-lg items-center ml-[38%] mt-10 p-5 bg-white border border-gray-200">
-                <h1 className="text-center text-4xl font-sans font-bold">Login</h1>
-                <p className="text-center text-sm text-gray-400 mb-4">Please login using account detail bellow.</p>
-                <div>
-                    <div className=" ml-3 mb-4">
-                    <input type="email" name="email"
-                    placeholder="Email Address"
-                    className="p-2 w-[95%] border border-gray-300r"
-                    />
-                    </div>
-                    <div className=" ml-3 mb-4">
-                    <input type="password" name="password"
-                    placeholder="Password"
-                    className="p-2 w-[95%] border border-gray-300"
-                    />
+
+            <div className="container mx-auto px-4 py-8 sm:py-12">
+                <div className="max-w-md mx-auto">
+                    <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+                        <div className="text-center mb-8">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-[#1A0B5B] mb-2">Login</h1>
+                            <p className="text-sm text-gray-500">Please login using account detail below.</p>
+                        </div>
+
+                        <form className="space-y-4">
+                            <div>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email Address"
+                                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 text-sm"
+                                />
+                            </div>
+
+                            <div>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 text-sm"
+                                />
+                            </div>
+
+                            <div className="flex justify-end">
+                                <button className="text-sm text-gray-500 hover:text-pink-600 transition-colors">
+                                    Forgot your password?
+                                </button>
+                            </div>
+
+                            <button
+                                type="submit"
+                                className="w-full py-3 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors text-sm sm:text-base font-medium"
+                            >
+                                Sign In
+                            </button>
+
+                            <p className="text-center text-sm text-gray-500">
+                                Don't have an Account?{' '}
+                                <Link href="/" className="text-pink-600 hover:text-pink-700 transition-colors font-medium">
+                                    Create account
+                                </Link>
+                            </p>
+                        </form>
                     </div>
 
-                    <p className="text-gray-400 text-sm mb-4 ml-3">Forgot Your password</p>
-                    <button className="w-60 h-10 bg-pink-600 text-white text-md ml-12 mb-4">Sign In</button>
-                    <p className="text-gray-400 text-sm ml-3">Don’t have an Account?<Link href="/">Create account</Link></p>
-
+                    <div className="mt-8 flex justify-center">
+                        <Image
+                            src="/images/Signatures.png"
+                            alt="Signature"
+                            width={300}
+                            height={120}
+                            className="w-48 sm:w-64 h-auto"
+                        />
+                    </div>
                 </div>
-            </div>    
-                <div>
-                    <Image
-                    src="/images/Signatures.png"
-                    alt="Signature"
-                    width={500}
-                    height={500}
-                    className="m-10 ml-[35%]"
-                    ></Image>
-                </div>
-            
+            </div>
         </div>
     )
 }

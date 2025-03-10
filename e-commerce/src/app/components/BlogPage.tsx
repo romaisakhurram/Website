@@ -28,28 +28,30 @@ export default function BlogPage () {
     ]
 
     return (
-        <div className="w-full h-[800] mt-20 p-5">
-          <h1 className="text-[40px] font-[JosefinSans] font-bold text-[#1A0B5B]text-center">Latest Blog</h1>
-          <div className="flex justify-center gap-10">
+        <div className="w-full py-10 md:py-20 px-4 md:px-5">
+          <h1 className="text-2xl md:text-[40px] font-[JosefinSans] font-bold text-[#1A0B5B] text-center">Latest Blog</h1>
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 md:gap-10">
            {data.map ((Idata,index) => (
-            <div key={index} className=" mt-20 bg-white w-[600] h-[500] shadow-lg border border-gray-300 rounded-xl">
-                <div className="flex  w-[330px] h-[200px]">
-                  <Image src={Idata.Image} 
-                  alt={Idata.title} 
-                  width={220} 
-                  height={180}
-                  className="w-[98%] h-[98%] m-2 rounded-lg"
-                   ></Image>
+            <div key={index} className="mt-8 md:mt-20 bg-white w-full md:w-[350px] shadow-lg border border-gray-300 rounded-xl">
+                <div className="w-full h-[200px] relative">
+                  <Image 
+                    src={Idata.Image} 
+                    alt={Idata.title} 
+                    width={220} 
+                    height={180}
+                    className="w-full h-full object-cover m-0 rounded-t-xl"
+                  />
                 </div>
-                <div className="w-[300px] h-[160px] p-5">
-                  <span className="text-[#1A0B5B] hover:text-pink-600 font-[Josefin Sans] text-xl">{Idata.title}</span><br />
-                  <span className="text-[#72718F] font-[Lato] text-md">{Idata.desc}</span><br />
-                  <button className="text-[#1A0B5B] font-[Lato] font-md underline underline-offset-1 hover:text-pink-600"><Link href="/Blog1">{Idata.button}</Link></button>
+                <div className="p-4 md:p-5">
+                  <h3 className="text-[#1A0B5B] hover:text-pink-600 font-[Josefin Sans] text-lg md:text-xl mb-2">{Idata.title}</h3>
+                  <p className="text-[#72718F] font-[Lato] text-sm md:text-md mb-4">{Idata.desc}</p>
+                  <button className="text-[#1A0B5B] font-[Lato] text-sm md:text-md underline underline-offset-1 hover:text-pink-600 transition-colors">
+                    <Link href="/Blog1">{Idata.button}</Link>
+                  </button>
                 </div>
             </div>
             ))}
             </div>
-  
         </div>
     )
 }

@@ -89,61 +89,90 @@ export default function ShopGrid () {
     ]
 
     return (
-        <header>
-           <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-               <h1 className="text-[30px] font-serif font-bold">Shop Grid Default</h1>
-                <ul className="flex gap-2">
+        <header className="min-h-screen bg-gray-50">
+           <div className="w-full bg-[#F2F0FF] px-4 sm:px-6 lg:px-20 py-8 sm:py-10">
+               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">Shop Grid Default</h1>
+                <ul className="flex gap-2 text-sm sm:text-base mt-2">
                   <li>Home_</li>
                   <li>Pages_</li>
                   <li className="text-pink-600">ShopGridDefault</li>
                 </ul>
             </div>
-           <div className="w-full h-full flex justify-center flex-wrap mt-15 p-5">
-                <div className="flex justify-center p-5">
+
+           <div className="container mx-auto px-4 py-8">
+                {/* Header Section */}
+                <div className="space-y-6 sm:space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-center mb-8 sm:mb-12">
                     <div>
-                       <h1 className="text-3xl font-bold font-serif">Ecommerce Accessories & Fashion Item</h1>
-                        <p className="text-sm text-gray-400">About 9,620 results(0.62 seconds)</p>
+                       <h1 className="text-2xl sm:text-3xl font-bold font-serif mb-2">Ecommerce Accessories & Fashion Item</h1>
+                        <p className="text-sm text-gray-500">About 9,620 results (0.62 seconds)</p>
                     </div>
 
-                    <div className="flex justify-center gap-5">
-                       <label htmlFor="number">Per Page:</label>
-                       <input type="number" name="number" 
-                       className="w-[5%] h-8 border border-gray-400" />
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="perPage" className="whitespace-nowrap">Per Page:</label>
+                           <input 
+                               type="number" 
+                               id="perPage"
+                               className="w-20 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
 
-                       <label htmlFor="text">Sort By:</label>
-                       <input type="text" name="number" placeholder="Best Watch"
-                       className=" w-[10%] h-8 border border-gray-400 text-md" />
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="sortBy" className="whitespace-nowrap">Sort By:</label>
+                           <input 
+                               type="text" 
+                               id="sortBy"
+                               placeholder="Best Watch"
+                               className="w-32 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
 
-                       <label htmlFor="number">Views:</label>
-                       <input type="number" name="number" 
-                        className="w-[20%] h-8 border border-gray-400" />
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="views" className="whitespace-nowrap">Views:</label>
+                           <input 
+                               type="number" 
+                               id="views"
+                               className="w-20 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
                     </div>
                 </div>
                 
-                {data.map ((Idata,index) => (
-                   <div key={index} className="w-[250px] h-[300px] m-[30px] p-[10px] gap-5">
-                       <div className=" bg-[#F2F0FF] items-center shadow-lg border border-gray-300 w-[500] h-[600]">
-                         <Image src={Idata.Image} 
-                         alt={Idata.title} 
-                         width={250} 
-                         height={200} 
-                         className="w-75 h-60 p-3"
-                         ></Image>
-                       </div>
-                       <div className="p-2 font-serif text-center">
-                         <h2 className="font-bold text-blue-950 text-sm">{Idata.title}</h2>
-                         <p className="text-gray-400 text-sm">{Idata.price}<del className="text-pink-600">{Idata.delPrice}</del></p>
-                       </div>
-                   </div>
-                ))}
-                <div>
+                {/* Products Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                    {data.map((item, index) => (
+                        <div key={index} className="group">
+                            <div className="aspect-square bg-[#F2F0FF] rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
+                                <div className="relative w-full h-full p-4">
+                                    <Image 
+                                        src={item.Image} 
+                                        alt={item.title} 
+                                        width={400}
+                                        height={400}
+                                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                </div>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h2 className="text-blue-950 font-bold font-serif text-sm sm:text-base mb-1 line-clamp-1">{item.title}</h2>
+                                <div className="flex items-center justify-center gap-2">
+                                    <span className="text-gray-600">{item.price}</span>
+                                    <del className="text-pink-600 text-sm">{item.delPrice}</del>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Signature */}
+                <div className="flex justify-center py-12">
                     <Image
-                       src="/images/Signatures.png"
-                       alt="Signature"
-                       width={500}
-                       height={500}
-                       className=" ml-[10%] mt-5"
-                    ></Image>
+                        src="/images/Signatures.png"
+                        alt="Signature"
+                        width={300}
+                        height={120}
+                        className="w-48 sm:w-64 lg:w-80 h-auto"
+                    />
                 </div>
             </div>    
         </header>  

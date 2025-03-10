@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { FaSearchPlus } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 
 export default function Shop () {
@@ -64,67 +64,102 @@ export default function Shop () {
     ]
 
     return (
-        <header>
-           <div className="w-full h-[150px] bg-[#F2F0FF] px-20 pt-10">
-               <h1 className="text-[30px] text-[#101750] font-[JosefinSans] font-bold">Shop Lists</h1>
-                <ul className="flex gap-2">
+        <header className="min-h-screen bg-gray-50">
+           <div className="w-full bg-[#F2F0FF] px-4 sm:px-6 lg:px-20 py-8 sm:py-10">
+               <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#101750] font-[JosefinSans] font-bold">Shop Lists</h1>
+                <ul className="flex gap-2 text-sm sm:text-base mt-2">
                   <li>Home_</li>
                   <li>Pages_</li>
                   <li className="text-pink-600">Shop List</li>
                 </ul>
             </div>
-           <div className="w-full h-[800] flex justify-center flex-wrap mt-15 p-5">
-                <div className="flex justify-center p-5">
+
+           <div className="container mx-auto px-4 py-8">
+                {/* Header Section */}
+                <div className="space-y-6 sm:space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-center mb-8 sm:mb-12">
                     <div>
-                       <h1 className="text-3xl text-[#151875] font-bold font-serif">Ecommerce Accessories & Fashion Item</h1>
-                        <p className="text-sm text-[#8A8FB9]">About 9,620 results(0.62 seconds)</p>
+                       <h1 className="text-2xl sm:text-3xl text-[#151875] font-bold font-serif mb-2">Ecommerce Accessories & Fashion Item</h1>
+                        <p className="text-sm text-[#8A8FB9]">About 9,620 results (0.62 seconds)</p>
                     </div>
 
-                    <div className="flex justify-center text-[#3F509E] gap-5">
-                       <label htmlFor="number">Per Page:</label>
-                       <input type="number" name="number" 
-                       className="w-[5%] h-8 border border-gray-400" />
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-[#3F509E]">
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="perPage" className="whitespace-nowrap">Per Page:</label>
+                           <input 
+                               type="number" 
+                               id="perPage"
+                               className="w-20 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
 
-                       <label htmlFor="text">Sort By:</label>
-                       <input type="text" name="text" placeholder="Best Watch"
-                       className=" w-[12%] h-8 border border-gray-400  text-sm" />
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="sortBy" className="whitespace-nowrap">Sort By:</label>
+                           <input 
+                               type="text" 
+                               id="sortBy"
+                               placeholder="Best Watch"
+                               className="w-32 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
 
-                       <label htmlFor="number">Views:</label>
-                       <input type="number" name="number" 
-                        className="w-[20%] h-8 border border-gray-400" />
+                       <div className="flex items-center gap-2">
+                           <label htmlFor="views" className="whitespace-nowrap">Views:</label>
+                           <input 
+                               type="number" 
+                               id="views"
+                               className="w-20 h-10 px-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                           />
+                       </div>
                     </div>
                 </div>
                 
-                {data.map ((Idata,index) => (
-                     <div key={index} className=" mt-10 w-[200] h-[400] flex justify-center gap-5 shadow-lg ">
-                        <div className="w-[300] h-[350] ">
-                            <Image src={Idata.Image} 
-                            alt={Idata.title} 
-                            width={100} 
-                            height={100}
-                            className="w-60 h-40 "
-                            ></Image>
+                {/* Products Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    {data.map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden group">
+                            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                                <Image 
+                                    src={item.Image} 
+                                    alt={item.title} 
+                                    width={400} 
+                                    height={300}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                                {/* Quick Action Buttons */}
+                                <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                    <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                                        <FaSearchPlus className="w-5 h-5 text-gray-700"/>
+                                    </button>
+                                    <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                                        <FaRegHeart className="w-5 h-5 text-gray-700"/>
+                                    </button>
+                                    <button className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                                        <MdOutlineLocalGroceryStore className="w-5 h-5 text-gray-700"/>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="p-4 sm:p-6">
+                                <h2 className="text-lg font-bold text-[#111C85] font-[JosefinSans] mb-2">{item.title}</h2>
+                                <div className="flex items-center gap-2 mb-3">
+                                    <span className="text-[#111C85] font-medium">{item.price}</span>
+                                    <del className="text-[#FF2AAA] text-sm">{item.delPrice}</del>
+                                </div>
+                                <p className="text-[#9295AA] text-sm">{item.desc}</p>
+                            </div>
                         </div>
-                        <div className="font-bold mt-2 p-2">
-                           <h2 className="text-[#111C85] font-[JosefinSans] text-lg">{Idata.title}</h2>
-                           <p className="text-[#111C85] text-md">{Idata.price} <del className="text-[#FF2AAA]">{Idata.delPrice}</del></p>
-                           <p className="text-[#9295AA] font[Lato] text-sm">{Idata.desc}</p>
-                            <ul className="flex mt-2">
-                                <li><FaSearchPlus className="w-6 h-5"/></li>
-                                <li><FaRegHeart className="w-8 h-6 "/></li>
-                                <li><MdOutlineLocalGroceryStore className="w-8 h-6"/></li>
-                            </ul>
-                        </div>
-                    </div>
-                ))}
-                <div>
+                    ))}
+                </div>
+
+                {/* Signature */}
+                <div className="flex justify-center py-12">
                     <Image
                        src="/images/Signatures.png"
                        alt="Signature"
-                       width={500}
-                       height={500}
-                       className=" ml-[10%] mt-10"
-                    ></Image>
+                       width={300}
+                       height={120}
+                       className="w-48 sm:w-64 lg:w-80 h-auto"
+                    />
                 </div>
             </div>    
         </header>  
