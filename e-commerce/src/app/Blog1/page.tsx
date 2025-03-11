@@ -41,9 +41,9 @@ export default function Blog1 () {
 
               <div className="bg-[#FAFAFB] p-4 sm:p-6 rounded-lg">
                 <p className="text-gray-600 text-sm sm:text-base italic">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo dictum sapien, amet, consequat
-                  toamk risusu."
+                  toamk risusu.
                 </p>
               </div>
               
