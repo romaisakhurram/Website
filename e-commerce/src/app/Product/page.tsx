@@ -49,7 +49,7 @@ export default function Product () {
             <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
                     {/* Thumbnail Images */}
-                    <div className="flex md:flex-col gap-2 order-2 md:order-1">
+                    <div className="flex md:flex-col gap-9 order-2 md:order-1">
                         <div className="w-20 sm:w-24 lg:w-32">
                            <Image
                            src="/images/Product1.png"
@@ -86,8 +86,8 @@ export default function Product () {
                         <Image
                         src="/images/Product4.png"
                         alt="bag image"
-                        width={350}
-                        height={250}
+                        width={260}
+                        height={200}
                         className="w-full max-w-md mx-auto rounded-lg"
                         />
                     </div>
